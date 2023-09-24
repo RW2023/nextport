@@ -9,9 +9,16 @@ const Navbar = () => {
               <i className="fas fa-bars"></i>
             </label>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a><i className="fas fa-home"></i> Homepage</a></li>
-              <li><a><i className="fas fa-briefcase"></i> Portfolio</a></li>
-              <li><a><i className="fas fa-info-circle"></i> About</a></li>
+              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+  <li><a><i className="fas fa-home"></i> Homepage</a></li>
+  <li><a><i className="fas fa-briefcase"></i> Portfolio</a></li>
+  <li><a><i className="fas fa-info-circle"></i> About</a></li>
+  <li><a><i className="fas fa-laptop-code"></i> Technologies</a></li>
+  <li><a><i className="fas fa-blog"></i> Blog</a></li>
+  <li><a><i className="fas fa-envelope"></i> Contact</a></li>
+  <li><a><i className="fas fa-code-branch"></i> GitHub Repo</a></li>
+</ul>
+
             </ul>
           </div>
         </div>
