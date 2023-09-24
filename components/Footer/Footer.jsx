@@ -41,7 +41,7 @@ const Footer = () => {
 </div>
 
 
-
+<i className="fa-solid fa-user-plus text-2xl space-x-3 mt-1"></i>
 </div>
 <div className='flex-row justify-between space-x-4'>
   <i className="fab fa-github text-3xl text-gray-900"></i>
