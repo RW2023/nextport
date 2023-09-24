@@ -41,6 +41,16 @@ anime({
   easing: 'easeOutExpo'
 });
 
+anime({
+  targets: '.text-bounce',
+  translateY: [-10, 10],
+  direction: 'alternate',
+  loop: 3,
+  duration: 800,
+  easing: 'easeOutExpo'
+});
+
+
   }, []);
 
   return (
@@ -52,14 +62,15 @@ anime({
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">
               <i className="fa-solid fa-code fly-in-left"></i> 
-              <span className="color-animate">Hello</span> 
+              <span className="color-animate">Hi!</span> 
               <i className="fa-solid fa-code fly-in-right"></i>
             </h1>
-            <p className="py-6 text-headline">
-              <i className="fa-solid fa-globe top-globe"></i> 
-              Welcome to my Portfolio Website 
-              <i className="fa-solid fa-globe bottom-globe"></i>
-            </p>
+            <p className="py-6 text-headline text-bounce">
+  <i className="fa-solid fa-globe top-globe"></i> 
+  Welcome to my  Website 
+  <i className="fa-solid fa-globe bottom-globe"></i>
+</p>
+
             <button className="btn btn-primary">
               <i className="fa-solid fa-terminal"></i> Come In! <i className="fas fa-door-open"></i>
             </button>
