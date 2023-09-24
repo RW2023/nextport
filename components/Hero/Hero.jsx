@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
       <Navbar />
-      <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/Z2bQfwF/background.png)'}}>
+      <div className="hero min-h-screen" style={{backgroundImage: 'url(/img/freepikbg2.jpg)'}}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
