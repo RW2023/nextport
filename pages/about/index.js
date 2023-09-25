@@ -1,6 +1,7 @@
 import React from 'react';
 import 'daisyui/dist/full.css'; 
 import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 // import Image from 'next/image';
 
 function About() {
@@ -35,6 +36,7 @@ function About() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
