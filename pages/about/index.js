@@ -13,7 +13,7 @@ function About() {
                     <h1 className="text-4xl font-bold mb-8">About Me</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
-                            <img
+                            <Image
                                 src="https://i.ibb.co/zP4GzRD/me.jpg"
                                 alt="Your Image"
                                 className="rounded-full w-60 mx-auto"
