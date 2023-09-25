@@ -71,7 +71,7 @@ anime({
   <i className="fa-solid fa-globe bottom-globe"></i>
 </p>
 
-            <button className="btn btn-primary">
+            <button className="btn btn-primary bg-tertiary text-stroke">
               <i className="fa-solid fa-terminal"></i> Come In! <i className="fas fa-door-open"></i>
             </button>
           </div>
