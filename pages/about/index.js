@@ -1,6 +1,7 @@
 import React from 'react';
 import 'daisyui/dist/full.css'; 
 import Navbar from '@/components/Navbar/Navbar';
+import Image from 'next/image';
 
 function About() {
     return (
@@ -12,20 +13,20 @@ function About() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <img
-                                src="https://via.placeholder.com/300"
+                                src="https://i.ibb.co/zP4GzRD/me.jpg"
                                 alt="Your Image"
                                 className="rounded-full w-60 mx-auto"
                             />
                         </div>
                         <div className="text-left space-y-4">
                             <p className="text-xl">
-                                Hello! I'm [Your Name], a passionate [Your Profession] based in [Your Location].
+                                Hello! I'mRyan, a passionate Junior Full Stack Developer based in London, Ontario Canada.
                             </p>
                             <p className="text-xl">
-                                With over [X years] of experience in [Field], I specialize in [Specialties].
+                                With a variety of skills   in Web Development, I specialize in The MERN stack (Mongo, Express, React and Node).
                             </p>
                             <p className="text-xl">
-                                When I'm not [What you do professionally], you can find me [Hobbies/Interests].
+                                When I'm not Coding, you can find me spending time with my young family. .
                             </p>
                             <button className="btn btn-primary">
                                 Download Resume
