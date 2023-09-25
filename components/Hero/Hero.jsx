@@ -71,8 +71,8 @@ anime({
   <i className="fa-solid fa-globe bottom-globe"></i>
 </p>
 
-            <button className="btn btn-primary bg-tertiary text-stroke">
-              <i className="fa-solid fa-terminal"></i> Come In! <i className="fas fa-door-open"></i>
+            <button className="btn btn-primary bg-tertiary text-black hover:text-white">
+              <i className="fa-solid fa-terminal" style={{visibility: 'visible'}} onMouseOver={(e) => e.currentTarget.style.visibility = 'hidden'} onMouseOut={(e) => e.currentTarget.style.visibility = 'visible'}></i> Come In! <i className="fas fa-door-open"></i>
             </button>
           </div>
         </div>
