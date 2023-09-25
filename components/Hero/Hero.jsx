@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import anime from 'animejs';
 
+
 const Hero = () => {
   const [isIconVisible, setIconVisible] = useState(true);
 
   useEffect(() => {
+    // Existing animations
     anime({
       targets: '.color-animate',
       color: ['#FFF', '#000', '#FF0000', '#FFF'],
@@ -28,30 +30,28 @@ const Hero = () => {
       easing: 'easeOutExpo'
     });
 
-anime({
-  targets: '.top-globe',
-  translateY: ['-1000%', '0%'],
-  duration: 2000,
-  easing: 'easeOutExpo'
-});
+    anime({
+      targets: '.top-globe',
+      translateY: ['-1000%', '0%'],
+      duration: 2000,
+      easing: 'easeOutExpo'
+    });
 
-anime({
-  targets: '.bottom-globe',
-  translateY: ['1000%', '0%'],
-  duration: 2000,
-  easing: 'easeOutExpo'
-});
+    anime({
+      targets: '.bottom-globe',
+      translateY: ['1000%', '0%'],
+      duration: 2000,
+      easing: 'easeOutExpo'
+    });
 
-anime({
-  targets: '.text-bounce',
-  translateY: [-10, 10],
-  direction: 'alternate',
-  loop: 3,
-  duration: 800,
-  easing: 'easeOutExpo'
-});
-
-
+    anime({
+      targets: '.text-bounce',
+      translateY: [-10, 10],
+      direction: 'alternate',
+      loop: 3,
+      duration: 800,
+      easing: 'easeOutExpo'
+    });
   }, []);
 
   return (
@@ -67,20 +67,18 @@ anime({
               <i className="fa-solid fa-code fly-in-right"></i>
             </h1>
             <p className="py-6 text-headline text-bounce">
-  <i className="fa-solid fa-globe top-globe"></i> 
-  Welcome to my  Website 
-  <i className="fa-solid fa-globe bottom-globe"></i>
-</p>
-
+              <i className="fa-solid fa-globe top-globe"></i> 
+              Welcome to my Website 
+              <i className="fa-solid fa-globe bottom-globe"></i>
+            </p>
             <button 
-  className="btn btn-primary bg-tertiary text-black hover:text-white"
-  onMouseOver={() => setIconVisible(false)}
-  onMouseOut={() => setIconVisible(true)}
-  style={{ transition: 'all 0.3s ease-in-out' }}
->
-  <i className="fa-solid fa-terminal" style={{ opacity: isIconVisible ? 1 : 0, transition: 'opacity 0.3s ease-in-out' }}></i> Come In! <i className="fas fa-door-open"></i>
-</button>
-
+              className="btn btn-primary bg-tertiary text-black hover:text-white"
+              onMouseOver={() => setIconVisible(false)}
+              onMouseOut={() => setIconVisible(true)}
+              style={{ transition: 'all 0.3s ease-in-out' }}
+            >
+              <i className="fa-solid fa-terminal" style={{ opacity: isIconVisible ? 1 : 0, transition: 'opacity 0.3s ease-in-out' }}></i> Come In! <i className="fas fa-door-open"></i>
+            </button>
           </div>
         </div>
       </div>
