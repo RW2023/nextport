@@ -73,12 +73,14 @@ anime({
 </p>
 
             <button 
-              className="btn btn-primary bg-tertiary text-black hover:text-white"
-              onMouseOver={() => setIconVisible(false)}
-              onMouseOut={() => setIconVisible(true)}
-            >
-              {isIconVisible && <i className="fa-solid fa-terminal"></i>} Come In! <i className="fas fa-door-open"></i>
-            </button>
+  className="btn btn-primary bg-tertiary text-black hover:text-white"
+  onMouseOver={() => setIconVisible(false)}
+  onMouseOut={() => setIconVisible(true)}
+  style={{ transition: 'all 0.3s ease-in-out' }}
+>
+  <i className="fa-solid fa-terminal" style={{ opacity: isIconVisible ? 1 : 0, transition: 'opacity 0.3s ease-in-out' }}></i> Come In! <i className="fas fa-door-open"></i>
+</button>
+
           </div>
         </div>
       </div>
