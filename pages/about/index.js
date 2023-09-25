@@ -1,8 +1,8 @@
 import React from 'react';
-import 'daisyui/dist/full.css'; 
+import 'daisyui/dist/full.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
-// import Image from 'next/image';
+import Image from 'next/image';
 
 function About() {
     return (
@@ -14,20 +14,22 @@ function About() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <Image
-                                src="https://i.ibb.co/zP4GzRD/me.jpg"
-                                alt="Your Image"
+                                src="/img/me.jpg"
+                                alt="A picture of Ryan Wilson"
                                 className="rounded-full w-60 mx-auto"
+                                width={240}  // Set the width
+                                height={240} // Set the height
                             />
                         </div>
                         <div className="text-left space-y-4">
                             <p className="text-xl">
-                                Hello! I'mRyan, a passionate Junior Full Stack Developer based in London, Ontario Canada.
+                                Hello! I'm Ryan, a passionate Junior Full Stack Developer based in London, Ontario Canada.
                             </p>
                             <p className="text-xl">
-                                With a variety of skills   in Web Development, I specialize in The MERN stack (Mongo, Express, React and Node).
+                                With a variety of skills in Web Development, I specialize in The MERN stack (Mongo, Express, React and Node).
                             </p>
                             <p className="text-xl">
-                                When I'm not Coding, you can find me spending time with my young family. 
+                                When I'm not Coding, you can find me spending time with my young family.
                             </p>
                             <button className="btn btn-primary">
                                 Download Resume
@@ -41,5 +43,3 @@ function About() {
     );
 }
 export default About;
-
-
