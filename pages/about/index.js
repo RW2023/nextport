@@ -8,7 +8,7 @@ function About() {
     return (
         <>
             <Navbar />
-            <div className=" min-h-screen py-12">
+            <div className=" min-h-screen py-12 px-5">
                 <div className="container mx-auto text-center">
                     <h1 className="text-4xl font-bold mb-8">About Me</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
