@@ -26,7 +26,7 @@ function About() {
                                 With a variety of skills   in Web Development, I specialize in The MERN stack (Mongo, Express, React and Node).
                             </p>
                             <p className="text-xl">
-                                When I'm not Coding, you can find me spending time with my young family. .
+                                When I'm not Coding, you can find me spending time with my young family. 
                             </p>
                             <button className="btn btn-primary">
                                 Download Resume
