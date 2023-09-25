@@ -23,13 +23,13 @@ function About() {
                         </div>
                         <div className="text-left space-y-4">
                             <p className="text-xl">
-                                Hello! I'm Ryan, a passionate Junior Full Stack Developer based in London, Ontario Canada.
+                                Hello! my name is Ryan, a passionate Junior Full Stack Developer based in London, Ontario Canada.
                             </p>
                             <p className="text-xl">
                                 With a variety of skills in Web Development, I specialize in The MERN stack (Mongo, Express, React and Node).
                             </p>
                             <p className="text-xl">
-                                When I'm not Coding, you can find me spending time with my young family.
+                                When I am not Coding, you can find me spending time with my young family.
                             </p>
                             <button className="btn btn-primary">
                                 Download Resume
