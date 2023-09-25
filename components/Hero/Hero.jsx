@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import anime from 'animejs';
 
-
 const Hero = () => {
+  const [isIconVisible, setIconVisible] = useState(true);
+
   useEffect(() => {
     anime({
       targets: '.color-animate',
@@ -71,8 +72,12 @@ anime({
   <i className="fa-solid fa-globe bottom-globe"></i>
 </p>
 
-            <button className="btn btn-primary bg-tertiary text-black hover:text-white">
-              <i className="fa-solid fa-terminal" style={{visibility: 'visible'}} onMouseOver={(e) => e.currentTarget.style.visibility = 'hidden'} onMouseOut={(e) => e.currentTarget.style.visibility = 'visible'}></i> Come In! <i className="fas fa-door-open"></i>
+            <button 
+              className="btn btn-primary bg-tertiary text-black hover:text-white"
+              onMouseOver={() => setIconVisible(false)}
+              onMouseOut={() => setIconVisible(true)}
+            >
+              {isIconVisible && <i className="fa-solid fa-terminal"></i>} Come In! <i className="fas fa-door-open"></i>
             </button>
           </div>
         </div>
