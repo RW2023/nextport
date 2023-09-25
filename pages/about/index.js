@@ -1,7 +1,7 @@
 import React from 'react';
 import 'daisyui/dist/full.css'; 
 import Navbar from '@/components/Navbar/Navbar';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 function About() {
     return (
