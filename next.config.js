@@ -1,4 +1,4 @@
-const withOptimizedImages = require('next-optimized-images').default;
+const withOptimizedImages = require('next-optimized-images');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
