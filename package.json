@@ -19,6 +19,7 @@
     "imagemin-optipng": "^8.0.0",
     "next": "13.5.2",
     "next-optimized-images": "^2.6.2",
+    "patch-package": "^8.0.0",
     "postcss": "8.4.30",
     "react": "18.2.0",
     "react-dom": "18.2.0",
