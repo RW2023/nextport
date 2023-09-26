@@ -42,27 +42,28 @@ const Navbar = () => {
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 
-    <Link href="/" className="link">
+<Link href="/" className="btn btn-link text-paragraph">
   <span className="fas fa-home"></span> Homepage
 </Link>
-<Link href="/portfolio" className="link">
-  <span className="fas fa-briefcase"></span> Portfolio
+<Link href="/projects" className="btn btn-link text-paragraph">
+  <span className="fas fa-briefcase"></span> Projects
 </Link>
-<Link href="/about" className="link">
+<Link href="/about" className="btn btn-link text-paragraph">
   <span className="fas fa-info-circle"></span> About
 </Link>
-<Link href="/technologies" className="link">
+{/* <Link href="/technologies" className="btn btn-link text-paragraph">
   <span className="fas fa-laptop-code"></span> Technologies
-</Link>
-<Link href="/blog" className="link">
+</Link> */}
+{/* <Link href="/blog" className="btn btn-link text-paragraph">
   <span className="fas fa-blog"></span> Blog
-</Link>
-<Link href="/contact" className="link">
+</Link> */}
+{/* <Link href="/contact" className="btn btn-link text-paragraph">
   <span className="fas fa-envelope"></span> Contact
-</Link>
-<Link href="/github" className="link">
+</Link> */}
+<Link href="https://github.com/RW2023" target="_blank" rel="noopener" className="btn btn-link text-paragraph">
   <span className="fas fa-code-branch"></span> GitHub Repo
 </Link>
+
 
           </ul>
         </div>

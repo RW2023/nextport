@@ -6,8 +6,9 @@ import Footer from '@/components/Footer/Footer';
 
 const Projects = () => {
     return (
-        <div> 
-            <Navbar />
+        <>
+         <Navbar style={{ zIndex: 1 }} />
+        <div style={{ zIndex: 0 }}> 
             <div className="container mx-auto p-4">
                 <div className="card bordered max-w-md mx-auto">
                     <figure>
@@ -29,6 +30,7 @@ const Projects = () => {
             </div>
             <Footer />
         </div> 
+        </>
     );
 };
 
