@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import anime from 'animejs';
+import Link from 'next/link';
 
 const Navbar = () => {
   useEffect(() => {
@@ -40,13 +41,29 @@ const Navbar = () => {
             <i className="fas fa-bars"></i>
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li><a><i className="fas fa-home"></i> Homepage</a></li>
-            <li><a><i className="fas fa-briefcase"></i> Portfolio</a></li>
-            <li><a><i className="fas fa-info-circle"></i> About</a></li>
-            <li><a><i className="fas fa-laptop-code"></i> Technologies</a></li>
-            <li><a><i className="fas fa-blog"></i> Blog</a></li>
-            <li><a><i className="fas fa-envelope"></i> Contact</a></li>
-            <li><a><i className="fas fa-code-branch"></i> GitHub Repo</a></li>
+
+    <Link href="/" className="link">
+  <span className="fas fa-home"></span> Homepage
+</Link>
+<Link href="/portfolio" className="link">
+  <span className="fas fa-briefcase"></span> Portfolio
+</Link>
+<Link href="/about" className="link">
+  <span className="fas fa-info-circle"></span> About
+</Link>
+<Link href="/technologies" className="link">
+  <span className="fas fa-laptop-code"></span> Technologies
+</Link>
+<Link href="/blog" className="link">
+  <span className="fas fa-blog"></span> Blog
+</Link>
+<Link href="/contact" className="link">
+  <span className="fas fa-envelope"></span> Contact
+</Link>
+<Link href="/github" className="link">
+  <span className="fas fa-code-branch"></span> GitHub Repo
+</Link>
+
           </ul>
         </div>
       </div>
