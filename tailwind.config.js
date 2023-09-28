@@ -5,6 +5,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  daisyui: {
+    themes: true
+  },
   theme: {
     extend: {
       colors: {
@@ -23,9 +26,7 @@ module.exports = {
       fontFamily: {
         'sans': ['Poppins', 'sans-serif'],
       },
-      daisyui: {
-        themes: true
-      },
+      
     },
   },
   plugins: [require("daisyui")],
