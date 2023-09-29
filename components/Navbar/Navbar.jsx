@@ -5,7 +5,9 @@ function Navbar() {
   return (
     <div className="navbar bg-black sticky top-0 z-50" data-theme="luxury">
       <div className="flex-1">
-        <Link href="/">Ryan Wilson</Link>
+        <Link href="/">
+          <i className="fa-solid fa-bars-staggered mr-1 text-lg"></i>Ryan Wilson
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
