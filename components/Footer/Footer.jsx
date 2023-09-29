@@ -3,10 +3,12 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-      <footer  className="footer footer-center p-4 sm:p-10 bg-black text-primary-content">
+      <footer className="footer footer-center p-4 sm:p-10 bg-black text-primary-content">
         <aside className="text-center">
           <p className="font-bold text-xl sm:text-2xl">
-            Ryan Wilson <br />Full Stack Developer<i className="fa-solid fa-layer-group ml-4 text-2xl sm:text-1xl"></i>
+            Ryan Wilson <br />
+            Full Stack Developer
+            <i className="fa-solid fa-layer-group ml-4 text-2xl sm:text-1xl"></i>
           </p>
           <p className="font-bold">Technologies</p>
           <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4">
@@ -36,11 +38,13 @@ const Footer = () => {
             <i className="fab fa-linkedin text-2xl sm:text-3xl text-blue-600"></i>
             <i className="fab fa-discord text-2xl sm:text-3xl text-purple-600"></i>
           </div>
-          <p className="mt-2">Copyright © 2023 - All rights reserved</p>
+          <p className="mt-2">
+            Copyright © 2023 - Ryan Wilson - All rights reserved
+          </p>
         </aside>
       </footer>
     </div>
-  )
+  );
 }
 
 export default Footer;
