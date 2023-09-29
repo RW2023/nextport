@@ -6,7 +6,7 @@ function Navbar() {
     <div className="navbar bg-black sticky top-0 z-50" data-theme="luxury">
       <div className="flex-1">
         <Link href="/">
-          <i className="fa-solid fa-bars-staggered mr-1 text-lg"></i>Ryan Wilson
+          <i className="fa-solid fa-bars-staggered mr-1 text-lg"></i>RW
         </Link>
       </div>
       <div className="flex-none">
@@ -26,7 +26,7 @@ function Navbar() {
               <i className="fas fa-briefcase"></i> Projects
             </Link>
           </li>
-          {/* Uncomment this when you want to add a Contacts link */}
+          {/*  add a Contacts link */}
           {/* <li>
             <Link href="/contacts"><i className="fas fa-envelope"></i> Contacts</Link>
           </li> */}
