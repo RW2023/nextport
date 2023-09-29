@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div>
-      <footer data-theme="dark" className="footer footer-center p-4 sm:p-10 bg-slate-800 text-primary-content">
+      <footer  className="footer footer-center p-4 sm:p-10 bg-black text-primary-content">
         <aside className="text-center">
           <p className="font-bold text-xl sm:text-2xl">
             Ryan Wilson <br />Full Stack Developer<i className="fa-solid fa-layer-group ml-4 text-2xl sm:text-1xl"></i>
@@ -32,12 +32,11 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex justify-center space-x-2 sm:space-x-4 mt-2">
-            <i className="fab fa-github text-2xl sm:text-3xl text-gray-900"></i>
+            <i className="fab fa-github text-2xl sm:text-3xl text-headline-900"></i>
             <i className="fab fa-linkedin text-2xl sm:text-3xl text-blue-600"></i>
             <i className="fab fa-discord text-2xl sm:text-3xl text-purple-600"></i>
           </div>
           <p className="mt-2">Copyright © 2023 - All rights reserved</p>
-          <a href="https://www.freepik.com/free-photo/turned-gray-laptop-computer_12661377.htm#query=coding&position=5&from_view=search&track=sph">Image by lucabravo</a> on Freepik
         </aside>
       </footer>
     </div>
