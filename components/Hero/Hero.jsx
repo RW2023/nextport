@@ -79,10 +79,13 @@ const Hero = () => {
               <i className="fa-solid fa-code fly-in-right"></i>
             </h1>
             <p className="py-6 text-headline text-bounce">
-              <i className="fa-solid fa-globe top-globe"></i>
+              <i className="fa-solid fa-globe top-globe mr-4"></i>{' '}
+              {/* Increased margin to mr-4 */}
               Welcome to my Website
-              <i className="fa-solid fa-globe bottom-globe"></i>
+              <i className="fa-solid fa-globe bottom-globe ml-4"></i>{' '}
+              {/* Added left margin to the second globe */}
             </p>
+
             <button
               className="btn btn-primary bg-tertiary text-black hover:text-white"
               onMouseOver={() => setIconVisible(false)}
