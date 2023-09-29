@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import anime from 'animejs';
@@ -10,7 +10,7 @@ const Hero = () => {
     // Existing animations
     anime({
       targets: '.color-animate',
-      color: ['#FFF', '#000', '#FF0000', '#FFF'],
+      color: ['#FFF', '#DC8114', '#5616C5', '#FFF'],
       duration: 2000,
       loop: false,
       easing: 'easeInOutSine',
@@ -87,7 +87,7 @@ const Hero = () => {
             </p>
 
             <button
-              className="btn btn-primary bg-tertiary text-black hover:text-white mt-3"
+              className="btn btn-primary bg-button text-black hover:text-white hover:border-button mt-3"
               onMouseOver={() => setIconVisible(false)}
               onMouseOut={() => setIconVisible(true)}
               style={{ transition: 'all 0.3s ease-in-out' }}
