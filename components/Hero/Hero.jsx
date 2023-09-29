@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import anime from 'animejs';
-
+import Link from 'next/link';
 const Hero = () => {
   const [isIconVisible, setIconVisible] = useState(true);
 
@@ -73,10 +73,11 @@ const Hero = () => {
         {/* Content */}
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
+            <h2 className="text-4xl text-headline">Hi I am </h2>
             <h1 className="text-5xl font-bold">
-              <i className="fa-solid fa-code fly-in-left mr-4"></i>
-              <span className="color-animate">Hi!</span>
-              <i className="fa-solid fa-code fly-in-right ml-4"></i>
+              <i className="fa-solid fa-laptop-code fly-in-left mr-4"></i>
+              <span className="color-animate">Ryan</span>
+              <i className="fa-solid fa-laptop-code fly-in-right ml-4"></i>
             </h1>
             <p className="py-6 text-headline text-bounce">
               <i className="fa-solid fa-globe top-globe mr-4"></i>{' '}
@@ -86,21 +87,22 @@ const Hero = () => {
               {/* Added left margin to the second globe */}
             </p>
 
-            <button
-              className="btn btn-primary bg-button text-black hover:text-white hover:border-button mt-3"
-              onMouseOver={() => setIconVisible(false)}
-              onMouseOut={() => setIconVisible(true)}
-              style={{ transition: 'all 0.3s ease-in-out' }}
-            >
-              <i
-                className="fa-solid fa-terminal"
-                style={{
-                  opacity: isIconVisible ? 1 : 0,
-                  transition: 'opacity 0.3s ease-in-out',
-                }}
-              ></i>{' '}
-              Come In! <i className="fas fa-door-open"></i>
-            </button>
+            <Link href="/welcome">
+              <div
+                className="btn btn-primary bg-button text-black hover:text-white hover:border-button mt-3"
+                role="button"
+                tabIndex={0}
+              >
+                <i
+                  className="fa-solid fa-terminal"
+                  style={{
+                    opacity: isIconVisible ? 1 : 0,
+                    transition: 'opacity 0.3s ease-in-out',
+                  }}
+                ></i>{' '}
+                Come In! <i className="fas fa-door-open"></i>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
