@@ -10,16 +10,23 @@ function Navbar() {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">
+              <i className="fas fa-home"></i> Home
+            </Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about">
+              <i className="fas fa-user"></i> About
+            </Link>
           </li>
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">
+              <i className="fas fa-briefcase"></i> Projects
+            </Link>
           </li>
+          {/* Uncomment this when you want to add a Contacts link */}
           {/* <li>
-            <Link href="/contacts">Contacts</Link>
+            <Link href="/contacts"><i className="fas fa-envelope"></i> Contacts</Link>
           </li> */}
         </ul>
       </div>
