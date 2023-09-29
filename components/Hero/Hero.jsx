@@ -74,20 +74,20 @@ const Hero = () => {
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">
-              <i className="fa-solid fa-code fly-in-left"></i>
+              <i className="fa-solid fa-code fly-in-left mr-4"></i>
               <span className="color-animate">Hi!</span>
-              <i className="fa-solid fa-code fly-in-right"></i>
+              <i className="fa-solid fa-code fly-in-right ml-4"></i>
             </h1>
             <p className="py-6 text-headline text-bounce">
               <i className="fa-solid fa-globe top-globe mr-4"></i>{' '}
-              {/* Increased margin to mr-4 */}
+              {/* Added right margin to the first globe */}
               Welcome to my Website
               <i className="fa-solid fa-globe bottom-globe ml-4"></i>{' '}
               {/* Added left margin to the second globe */}
             </p>
 
             <button
-              className="btn btn-primary bg-tertiary text-black hover:text-white"
+              className="btn btn-primary bg-tertiary text-black hover:text-white mt-3"
               onMouseOver={() => setIconVisible(false)}
               onMouseOut={() => setIconVisible(true)}
               style={{ transition: 'all 0.3s ease-in-out' }}
