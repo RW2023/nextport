@@ -3,7 +3,7 @@ import Link from 'next/link'; // Import the Link component from Next.js
 
 function Navbar() {
   return (
-    <div className="navbar bg-black" data-theme="luxury">
+    <div className="navbar bg-black sticky top-0 z-50" data-theme="luxury">
       <div className="flex-1">
         <Link href="/">Ryan Wilson</Link>
       </div>
