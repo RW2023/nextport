@@ -2,6 +2,7 @@ import React from 'react'
 import image  from 'next/image'
 import NextLogo from '../NextLogo/NextLogo'
 import ReactLogo from '../ReactLogo/ReactLogo'
+import NodeLogo from '../NodeLogo/NodeLogo'
 
 const Footer = () => {
   return (
@@ -36,7 +37,7 @@ const Footer = () => {
               <p>Next.js</p>
             </div>
             <div className="flex flex-col items-center">
-              <i className="fab fa-node-js text-2xl sm:text-3xl text-green-600"></i>
+              <NodeLogo />
               <p>Node.js</p>
             </div>
           </div>
