@@ -1,6 +1,7 @@
 import React from 'react'
 import image  from 'next/image'
 import NextLogo from '../NextLogo/NextLogo'
+import ReactLogo from '../ReactLogo/ReactLogo'
 
 const Footer = () => {
   return (
@@ -27,7 +28,7 @@ const Footer = () => {
               <p>CSS3</p>
             </div>
             <div className="flex flex-col items-center">
-              <i className="fab fa-react text-2xl sm:text-3xl text-blue-300"></i>
+            <ReactLogo />
               <p>React</p>
             </div>
             <div className="flex flex-col items-center">
