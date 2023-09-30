@@ -1,3 +1,5 @@
+// pages/Projects.js
+
 import React from 'react';
 import Image from 'next/image';
 import axios from 'axios';
@@ -13,7 +15,10 @@ function Projects({ showcaseRepos }) {
         {showcaseRepos.length > 0 ? (
           showcaseRepos.map((repo) => (
             <div key={repo.id} className="card bordered max-w-md mx-auto my-4">
-              <figure>{/* Add image here if available */}</figure>
+              <figure>
+                {/* Uncomment and add image here if available */}
+                {/* <Image src="/path/to/image.jpg" width={500} height={500} alt="Repo image" /> */}
+              </figure>
               <div className="card-body">
                 <h2 className="card-title text-2xl">{repo.name}</h2>
                 <p>{repo.description || 'No description available.'}</p>
@@ -33,6 +38,14 @@ function Projects({ showcaseRepos }) {
           ))
         ) : (
           <div className="card bordered max-w-md mx-auto">
+            <figure>
+              <Image
+                src="/img/placeholder.jpg"
+                width={500}
+                height={500}
+                alt="Placeholder image"
+              />
+            </figure>
             <div className="card-body">
               <h1 className="card-title text-2xl">
                 No showcase projects available.
@@ -58,10 +71,11 @@ export async function getStaticProps() {
       },
     );
 
-    const showcaseRepos = response.data.filter((repo) => {
-      return repo.name.includes('pfsc');
-      console.log(showcaseRepos);
-    });
+    const showcaseRepos = response.data.filter((repo) =>
+      repo.name.includes('pfsc'),
+    );
+
+    console.log(showcaseRepos); // Moved the console.log outside of the filter function
 
     return {
       props: {
