@@ -1,4 +1,6 @@
 import React from 'react'
+import image  from 'next/image'
+import NextLogo from '../NextLogo/NextLogo'
 
 const Footer = () => {
   return (
@@ -27,6 +29,10 @@ const Footer = () => {
             <div className="flex flex-col items-center">
               <i className="fab fa-react text-2xl sm:text-3xl text-blue-300"></i>
               <p>React</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <NextLogo />
+              <p>Next.js</p>
             </div>
             <div className="flex flex-col items-center">
               <i className="fab fa-node-js text-2xl sm:text-3xl text-green-600"></i>
