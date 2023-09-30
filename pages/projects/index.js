@@ -19,7 +19,7 @@ const Projects = () => {
                             height={300}
                         />
                     </figure>
-                    <div className="card-body">
+                    <div className="card-body ">
                         <h1 className="card-title text-2xl">Projects Coming Soon!</h1>
                         <p>We're working hard to list all the cool projects here. Stay tuned!</p>
                         <div className="card-actions">

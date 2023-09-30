@@ -26,9 +26,11 @@ function Welcome() {
                   height={300}
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="card-title">Projects</h2>
-                <p>Browse my latest projects and creations.</p>
+              <div className="card-body bg-black">
+                <h2 className="card-title text-headline">Projects</h2>
+                <p className="text-paragraph">
+                  Browse my latest projects and creations.
+                </p>
               </div>
             </div>
             <div className="card bordered hover:bg-primary hover:shadow-xl">
@@ -41,23 +43,35 @@ function Welcome() {
                   height={300} // Set the height
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="card-title">About Me</h2>
-                <p>Learn more about me and my skills.</p>
+              <div className="card-body bg-black">
+                <h2 className="card-title text-headline">About Me</h2>
+                <p className="text-paragraph">
+                  Learn more about me and my skills.
+                </p>
               </div>
             </div>
             <div className="card bordered hover:bg-primary hover:shadow-xl">
-              <figure>{/* Optionally insert an image here */}</figure>
-              <div className="card-body">
+              <figure>
+                {' '}
+                <Image
+                  src="/img/connect.jpg"
+                  alt="Placeholder"
+                  width={500}
+                  height={300}
+                />
+              </figure>
+              <div className="card-body bg-black">
                 <h2 className="card-title">Contact</h2>
-                <p>Get in touch with me.</p>
+                <p className="text-paragraph">Get in touch with me.</p>
               </div>
             </div>
             <div className="card bordered hover:bg-primary hover:shadow-xl">
               <figure>{/* Optionally insert an image here */}</figure>
-              <div className="card-body">
+              <div className="card-body bg-black">
                 <h2 className="card-title">Something Else</h2>
-                <p>Explore additional content here.</p>
+                <p className="text-paragraph">
+                  Explore additional content here.
+                </p>
               </div>
             </div>
           </div>
