@@ -89,7 +89,7 @@ const Hero = () => {
 
             <Link href="/welcome">
               <div
-                className="btn btn-primary bg-button text-black hover:text-white hover:border-button mt-3"
+                className="btn btn-primary border-stroke bg-button text-black hover:text-white hover:border-stroke mt-3"
                 role="button"
                 tabIndex={0}
               >
