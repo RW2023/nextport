@@ -26,10 +26,10 @@ function Navbar() {
               <i className="fas fa-briefcase"></i> Projects
             </Link>
           </li>
-          {/*  add a Contacts link */}
-          {/* <li>
-            <Link href="/contacts"><i className="fas fa-envelope"></i> Contacts</Link>
-          </li> */}
+           
+          <li>
+            <Link href="/contact"><i className="fas fa-envelope"></i> Contacts</Link>
+          </li> 
         </ul>
       </div>
     </div>
