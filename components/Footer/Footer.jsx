@@ -3,6 +3,9 @@ import image  from 'next/image'
 import NextLogo from '../NextLogo/NextLogo'
 import ReactLogo from '../ReactLogo/ReactLogo'
 import NodeLogo from '../NodeLogo/NodeLogo'
+import CssLogo from '../CssLogo/CssLogo'
+import HtmlLogo from '../HtmlLogo/HtmlLogo'
+import JsLogo from '../JsLogo/JsLogo'
 
 const Footer = () => {
   return (
@@ -17,15 +20,15 @@ const Footer = () => {
           <p className="font-bold">Technologies</p>
           <div className="flex flex-wrap justify-center space-x-2 sm:space-x-4">
             <div className="flex flex-col items-center">
-              <i className="fab fa-js-square text-2xl sm:text-3xl text-yellow-400"></i>
+              <JsLogo />
               <p>JavaScript</p>
             </div>
             <div className="flex flex-col items-center">
-              <i className="fab fa-html5 text-2xl sm:text-3xl text-orange-500"></i>
+              <HtmlLogo />
               <p>HTML5</p>
             </div>
             <div className="flex flex-col items-center">
-              <i className="fab fa-css3 text-2xl sm:text-3xl text-blue-500"></i>
+              <CssLogo />
               <p>CSS3</p>
             </div>
             <div className="flex flex-col items-center">
