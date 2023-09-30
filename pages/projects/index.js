@@ -1,39 +1,47 @@
-// pages/projects/index.js
 import React from 'react';
 import Image from 'next/image';
 import axios from 'axios';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
+import Link from 'next/link';
 
 function Projects({ showcaseRepos }) {
   return (
     <>
-      <Navbar style={{ zIndex: 1 }} />
-      <div>
-        <div className="container mx-auto p-4">
-          <div className="card bordered max-w-md mx-auto">
-            <figure>
-              <Image
-                src="/img/placeholder.jpg"
-                alt="Placeholder"
-                width={500}
-                height={300}
-              />
-            </figure>
-            <div className="card-body ">
-              <h1 className="card-title text-2xl">Projects Coming Soon!</h1>
-              <p>
-                We're working hard to list all the cool projects here. Stay
-                tuned!
-              </p>
-              <div className="card-actions">
-                <button className="btn btn-primary">Stay Updated</button>
+      <Navbar />
+      <div className="container mx-auto p-4">
+        {showcaseRepos.length > 0 ? (
+          showcaseRepos.map((repo) => (
+            <div key={repo.id} className="card bordered max-w-md mx-auto my-4">
+              <figure>{/* Add image here if available */}</figure>
+              <div className="card-body">
+                <h2 className="card-title text-2xl">{repo.name}</h2>
+                <p>{repo.description || 'No description available.'}</p>
+                <div className="card-actions">
+                  <Link href={repo.html_url}>
+                    <a
+                      className="btn btn-primary"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View on GitHub
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
+          ))
+        ) : (
+          <div className="card bordered max-w-md mx-auto">
+            <div className="card-body">
+              <h1 className="card-title text-2xl">
+                No showcase projects available.
+              </h1>
+            </div>
           </div>
-        </div>
-        <Footer />
+        )}
       </div>
+      <Footer />
     </>
   );
 }
@@ -52,6 +60,7 @@ export async function getStaticProps() {
 
     const showcaseRepos = response.data.filter((repo) => {
       return repo.name.includes('pfsc');
+      console.log(showcaseRepos);
     });
 
     return {
