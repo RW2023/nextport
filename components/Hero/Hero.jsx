@@ -1,5 +1,5 @@
 // Hero.js
-'use client';
+// 'use client';
 import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../Navbar/Navbar'; // Adjust this path if needed
 import anime from 'animejs'; // Make sure animejs is installed
