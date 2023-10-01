@@ -9,6 +9,7 @@ function Card() {
     {
       title: 'Tip Calculator',
       description: 'Front End Mentor Challenge',
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
       image: '/img/projects/tip.png',
       github: 'https://github.com/RW2023/tip-calculator-app-pfsc',
       liveVersion: 'https://femtipcalculator2023.netlify.app/',
@@ -41,6 +42,7 @@ function Card() {
               <h2 className="card-title text-2xl">{project.title}</h2>
               <p>{project.description}</p>
               <div className="flex space-x-2">
+                <h3 className="text-xl">Tech Stack:</h3>
                 {project.stack &&
                   project.stack.map((TechLogo, i) => (
                     <div key={i} className="tech-logo">
