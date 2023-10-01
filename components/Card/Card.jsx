@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CssLogo from '../CssLogo/CssLogo';
+import HtmlLogo from '../HtmlLogo/HtmlLogo';
 
 function Card() {
   let projects = [
@@ -8,15 +10,16 @@ function Card() {
       title: 'Tip Calculator',
       description: 'Front End Mentor Challenge',
       image: '/img/projects/tip.png',
-      github: 'https://github.com/RW2023/tip-calculator-app-pfsc', // Add the GitHub link
-      liveVersion: 'https://femtipcalculator2023.netlify.app/', // Add the live version link if available
+      github: 'https://github.com/RW2023/tip-calculator-app-pfsc',
+      liveVersion: 'https://femtipcalculator2023.netlify.app/',
     },
     {
-      title: 'project 2',
-      description: 'Front End Mentor Challenge',
-      image: '/img/placeholder.jpg',
-      github: 'https://github.com/example/project2', // Add the GitHub link
-      liveVersion: '', // Add the live version link if available
+      title: 'ComingSoon',
+      description: 'Landing Page from Coding Boot-camp',
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
+      image: '/img/projects/Coming-Soon.png',
+      github: 'https://github.com/RW2023/ComingSoon',
+      liveVersion: 'https://comingsoonfm.netlify.app/',
     },
     // ... (Add other projects here)
   ];
@@ -37,13 +40,20 @@ function Card() {
             <div className="card-body">
               <h2 className="card-title text-2xl">{project.title}</h2>
               <p>{project.description}</p>
+              <div className="flex space-x-2">
+                {project.stack &&
+                  project.stack.map((TechLogo, i) => (
+                    <div key={i} className="tech-logo">
+                      {TechLogo}
+                    </div>
+                  ))}
+              </div>
               <div className="card-actions">
                 <Link href={project.github}>
                   <button className="btn btn-primary bg-button border-stroke text-stroke hover:border-stroke hover:text-headline">
                     View on GitHub
                   </button>
                 </Link>
-                {/* Add Live Version link if available */}
                 {project.liveVersion && (
                   <Link href={project.liveVersion}>
                     <button className="btn btn-secondary bg-stroke text-headline border-headline hover:bg-primary hover:border-stroke">
