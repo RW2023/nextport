@@ -1,5 +1,5 @@
 // Hero.js
-
+'use client';
 import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../Navbar/Navbar'; // Adjust this path if needed
 import anime from 'animejs'; // Make sure animejs is installed
@@ -76,7 +76,7 @@ const Hero = () => {
       <div className="hero min-h-screen relative">
         {/* Background Placeholder Image */}
         <Image
-          src="/img/background.jpeg" // Corrected path and filename
+          src="/img/backgroundRed.jpeg" // Corrected path and filename
           id="video-placeholder"
           className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
           width={500}
@@ -92,7 +92,7 @@ const Hero = () => {
           autoPlay
           muted
         >
-          <source src="/morph.mp4" type="video/mp4" />
+          <source src="/code.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Content */}
