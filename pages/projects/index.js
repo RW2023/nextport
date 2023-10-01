@@ -24,10 +24,10 @@ function Projects() {
             <p>This is an example project description.</p>
             <div className="card-actions">
               <Link href="https://github.com/example/example-project">
-                <button className="btn btn-primary">View on GitHub</button>
+                <button className="btn btn-primary bg-button border-stroke text-stroke hover:border-stroke hover:text-headline">View on GitHub</button>
               </Link>
               <Link href="https://example.com/live-version">
-                <button className="btn btn-secondary">Live Version</button>
+                <button className="btn btn-secondary bg-stroke text-headline border-headline hover:bg-primary hover:border-stroke">Live Version</button>
               </Link>
             </div>
           </div>
