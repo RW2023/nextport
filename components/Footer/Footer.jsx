@@ -75,7 +75,7 @@ const Footer = () => {
         </aside>
         <div className="flex justify-between">
           <a href="https://icons8.com/icon/o6OvAxG0nzTH/mongo-db" class></a>
-          icon by <a href="https://icons8.com">Icons8</a>
+        Tech icon svg's by <a href="https://icons8.com">Icons8</a>
         </div>
       </footer>
     </div>
