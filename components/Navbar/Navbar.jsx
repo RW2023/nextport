@@ -32,7 +32,7 @@ function Navbar() {
 
           <li>
             <Link href="/contact">
-              <i className="fas fa-envelope"></i> Contacts
+              <i className="fas fa-envelope"></i> Contact
             </Link>
           </li>
         </ul>
