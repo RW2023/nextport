@@ -31,9 +31,9 @@ function About() {
                             <p className="text-xl">
                                 When I am not Coding, you can find me spending time with my young family.
                             </p>
-                            <button className="btn btn-primary">
+                            {/* <button className="btn btn-primary">
                                 Download Resume
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>
