@@ -1,4 +1,5 @@
 // Hero.js
+'useClient'
 import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../Navbar/Navbar';
 import anime from 'animejs';
@@ -38,7 +39,6 @@ const Hero = () => {
       duration: 2000,
       easing: 'easeOutExpo',
     });
-
     anime({
       targets: '.bottom-globe',
       translateY: ['1000%', '0%'],
