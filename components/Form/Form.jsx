@@ -7,9 +7,9 @@ function handleSubmit(e) {
 
 function Form() {
   return (
-    <div className="flex flex-wrap justify-center items-center h-screen bg-background dark:bg-gray-900">
-      <div className="card w-full max-w-md shadow-2xl rounded-lg overflow-hidden mx-2">
-        <div className="card-body bg-main text-stroke text-center">
+    <div className="flex flex-wrap justify-center items-center h-screen bg-background dark:bg-gray-900 border-stroke">
+      <div className="card w-full max-w-md shadow-2xl rounded-lg overflow-hidden mx-2 border-stroke">
+        <div className="card-body bg-main text-stroke text-center border-stroke">
           <h2 className="card-title text-3xl font-semibold mb-4">Contact Me</h2>
         </div>
         <form onSubmit={handleSubmit} className="p-4">
