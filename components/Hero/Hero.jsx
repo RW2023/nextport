@@ -1,9 +1,10 @@
 // Hero.js
-'useClient'
+
 import React, { useEffect, useState, useRef } from 'react';
-import Navbar from '../Navbar/Navbar';
-import anime from 'animejs';
+import Navbar from '../Navbar/Navbar'; // Adjust this path if needed
+import anime from 'animejs'; // Make sure animejs is installed
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Hero = () => {
   const [isIconVisible, setIconVisible] = useState(true);
@@ -39,6 +40,7 @@ const Hero = () => {
       duration: 2000,
       easing: 'easeOutExpo',
     });
+
     anime({
       targets: '.bottom-globe',
       translateY: ['1000%', '0%'],
@@ -73,12 +75,15 @@ const Hero = () => {
       <Navbar />
       <div className="hero min-h-screen relative">
         {/* Background Placeholder Image */}
-        <img
+        <Image
+          src="/img/background.jpeg" // Corrected path and filename
           id="video-placeholder"
-          src="/backgroundPlaceholderBlue.png"
           className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
+          width={500}
+          height={500}
           alt="Video Placeholder"
         />
+
         {/* Background Video */}
         <video
           ref={videoRef}
