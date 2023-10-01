@@ -1,10 +1,12 @@
-// 'use client';
-import React, { useEffect, useState } from 'react';
+// Hero.js
+import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '../Navbar/Navbar';
 import anime from 'animejs';
 import Link from 'next/link';
+
 const Hero = () => {
   const [isIconVisible, setIconVisible] = useState(true);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     // Existing animations
@@ -52,14 +54,34 @@ const Hero = () => {
       duration: 800,
       easing: 'easeOutExpo',
     });
+
+    // Hide placeholder image when video starts playing
+    const videoElement = videoRef.current;
+    const handleVideoPlay = () => {
+      document.getElementById('video-placeholder').style.display = 'none';
+    };
+
+    videoElement.addEventListener('play', handleVideoPlay);
+
+    return () => {
+      videoElement.removeEventListener('play', handleVideoPlay);
+    };
   }, []);
 
   return (
     <>
       <Navbar />
       <div className="hero min-h-screen relative">
+        {/* Background Placeholder Image */}
+        <img
+          id="video-placeholder"
+          src="/backgroundPlaceholderBlue.png"
+          className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
+          alt="Video Placeholder"
+        />
         {/* Background Video */}
         <video
+          ref={videoRef}
           className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
           loop
           autoPlay
@@ -68,8 +90,6 @@ const Hero = () => {
           <source src="/morph.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* Overlay */}
-        {/* <div className="hero-overlay bg-opacity-80"></div> */}
         {/* Content */}
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
@@ -80,13 +100,10 @@ const Hero = () => {
               <i className="fa-solid fa-laptop-code fly-in-right ml-4"></i>
             </h1>
             <p className="py-6 text-headline text-bounce">
-              <i className="fa-solid fa-globe top-globe mr-4"></i>{' '}
-              {/* Added right margin to the first globe */}
+              <i className="fa-solid fa-globe top-globe mr-4"></i>
               Welcome to my Website
-              <i className="fa-solid fa-globe bottom-globe ml-4"></i>{' '}
-              {/* Added left margin to the second globe */}
+              <i className="fa-solid fa-globe bottom-globe ml-4"></i>
             </p>
-
             <Link href="/welcome">
               <div
                 className="btn btn-primary border-stroke bg-button text-black hover:text-white hover:border-stroke mt-3"
@@ -99,7 +116,7 @@ const Hero = () => {
                     opacity: isIconVisible ? 1 : 0,
                     transition: 'opacity 0.3s ease-in-out',
                   }}
-                ></i>{' '}
+                ></i>
                 Come In! <i className="fas fa-door-open"></i>
               </div>
             </Link>
