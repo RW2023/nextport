@@ -1,55 +1,57 @@
-import React from 'react'
+import React from 'react';
+
+function handleSubmit(e) {
+  e.preventDefault();
+  // Handle form submission here
+}
 
 function Form() {
   return (
-    <div
-      className="flex justify-center items-center h-screen"
-      data-theme="dark"
-    >
-      <div className="card shadow-lg w-1/3">
-        <div className="card-body">
-          <h2 className="card-title">Contact Me</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                className="input input-bordered"
-                required
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Message</span>
-              </label>
-              <textarea
-                name="message"
-                className="textarea textarea-bordered"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Submit
-            </button>
-          </form>
+    <div className="flex flex-wrap justify-center items-center h-screen bg-background dark:bg-gray-900">
+      <div className="card w-full max-w-md shadow-2xl rounded-lg overflow-hidden mx-2">
+        <div className="card-body bg-main text-stroke text-center">
+          <h2 className="card-title text-3xl font-semibold mb-4">Contact Me</h2>
         </div>
+        <form onSubmit={handleSubmit} className="p-4">
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text text-headline">Name</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text text-headline">Email</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              className="input input-bordered w-full"
+              required
+            />
+          </div>
+          <div className="form-control mb-4">
+            <label className="label">
+              <span className="label-text text-headline">Message</span>
+            </label>
+            <textarea
+              name="message"
+              className="textarea textarea-bordered w-full h-24"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" className="btn btn-accent w-full bg-button text-stroke">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );
 }
 
-export default Form
+export default Form;
