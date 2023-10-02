@@ -3,13 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CssLogo from '../CssLogo/CssLogo';
 import HtmlLogo from '../HtmlLogo/HtmlLogo';
+import JsLogo from '../JsLogo/JsLogo';
 
 function Card() {
   let projects = [
     {
       title: 'Tip Calculator',
       description: 'Front End Mentor Challenge',
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />],
       image: '/img/projects/tip.png',
       github: 'https://github.com/RW2023/tip-calculator-app-pfsc',
       liveVersion: 'https://femtipcalculator2023.netlify.app/',
