@@ -23,10 +23,7 @@ function Card() {
     {
       title: 'ComingSoon',
       description: 'Landing Page from Coding Boot-camp',
-      stack: [
-      <HtmlLogo key="html" />, 
-      <CssLogo key="css" />
-    ],
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
       image: '/img/projects/Coming-Soon.png',
       github: 'https://github.com/RW2023/ComingSoon',
       liveVersion: 'https://comingsoonfm.netlify.app/',
@@ -47,10 +44,7 @@ function Card() {
     {
       title: 'QrCode',
       description: 'Front End Mentor Challenge',
-      stack: [
-      <HtmlLogo key="html" />, 
-      <CssLogo key="css" />
-    ],
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
       image: '/img/projects/qrCode.png',
       github: 'https://github.com/RW2023/qrCode',
       liveVersion: 'https://rw2023qrcode.netlify.app/',
@@ -60,10 +54,10 @@ function Card() {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 gap-4 justify-center">
         {projects.map((project, index) => (
           <div
-            className="card bordered max-w-md mx-auto my-4"
+            className="card bordered max-w-md w-full mx-auto my-4"
             data-theme="luxury"
             key={index}
           >
@@ -78,7 +72,7 @@ function Card() {
             <div className="card-body">
               <h2 className="card-title text-2xl">{project.title}</h2>
               <p>{project.description}</p>
-              <div className="flex space-x-2">
+              <div className="flex flex-wrap space-x-2">
                 <h3 className="text-xl">Tech Stack:</h3>
                 {project.stack &&
                   project.stack.map((TechLogo, i) => (
