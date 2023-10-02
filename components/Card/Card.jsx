@@ -29,7 +29,11 @@ function Card() {
     <div className="container mx-auto p-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         {projects.map((project, index) => (
-          <div className="card bordered max-w-md mx-auto my-4" key={index}>
+          <div
+            className="card bordered max-w-md mx-auto my-4"
+            data-theme="luxury"
+            key={index}
+          >
             <figure>
               <Image
                 src={project.image}
@@ -51,14 +55,17 @@ function Card() {
                   ))}
               </div>
               <div className="card-actions">
-                <Link href={project.github}>
-                  <button className="btn btn-primary bg-button border-stroke text-stroke hover:border-stroke hover:text-headline">
+                <Link href={project.github} aria-label="View project on GitHub">
+                  <button className="btn btn-primary bg-button border-stroke text-stroke ">
                     View on GitHub
                   </button>
                 </Link>
                 {project.liveVersion && (
-                  <Link href={project.liveVersion}>
-                    <button className="btn btn-secondary bg-stroke text-headline border-headline hover:bg-primary hover:border-stroke">
+                  <Link
+                    href={project.liveVersion}
+                    aria-label="View live version of project"
+                  >
+                    <button className="btn btn-secondary bg-stroke border-headline hover:bg-primary hover:border-stroke hover:text-stroke">
                       Live Version
                     </button>
                   </Link>
