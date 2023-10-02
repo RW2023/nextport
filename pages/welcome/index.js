@@ -1,22 +1,27 @@
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
 import React from 'react';
-import Image from 'next/image'; 
+import Image from 'next/image';
+import 'daisyui/dist/full.css';
+
 function Welcome() {
   return (
     <>
       <Navbar />
-      <div className="bg-gray-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8 text-white">
+      <div
+        className="bg-gray-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8 text-white"
+        data-theme="dark"
+      >
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-extrabold text-center mb-4">
-            Welcome to My Portfolio
+            Welcome to My Web App
           </h1>
           <p className="mt-4 text-lg text-center mb-12">
-            Here, you'll find a showcase of my work and more. Explore the
-            categories below:
+            Here, you'll find a showcase of some of my work and more. Check out
+            the categories below:
           </p>
           <div className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-            <div className="card bordered hover:bg-primary hover:shadow-xl">
+            <div className="card bordered hover:bg-primary hover:shadow-xl transition ease-in-out duration-200 transform hover:scale-105">
               <figure>
                 {' '}
                 <Image
@@ -33,7 +38,7 @@ function Welcome() {
                 </p>
               </div>
             </div>
-            <div className="card bordered hover:bg-primary hover:shadow-xl">
+            <div className="card bordered hover:bg-primary hover:shadow-xl transition ease-in-out duration-200 transform hover:scale-105">
               <figure>
                 <Image
                   src="/img/me.jpg"
@@ -50,7 +55,7 @@ function Welcome() {
                 </p>
               </div>
             </div>
-            <div className="card bordered hover:bg-primary hover:shadow-xl">
+            <div className="card bordered hover:bg-primary hover:shadow-xl transition ease-in-out duration-200 transform hover:scale-105">
               <figure>
                 {' '}
                 <Image
@@ -65,7 +70,7 @@ function Welcome() {
                 <p className="text-paragraph">Get in touch with me.</p>
               </div>
             </div>
-            <div className="card bordered hover:bg-primary hover:shadow-xl">
+            <div className="card bordered hover:bg-primary hover:shadow-xl transition ease-in-out duration-200 transform hover:scale-105">
               <figure>{/* Optionally insert an image here */}</figure>
               <div className="card-body bg-black">
                 <h2 className="card-title">Something Else</h2>
