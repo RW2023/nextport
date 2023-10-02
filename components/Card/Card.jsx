@@ -41,12 +41,20 @@ function Card() {
       github: 'https://github.com/RW2023/pokedex',
       liveVersion: 'https://rwpokegame.netlify.app/',
     },
+    {
+      title: 'QrCode',
+      description: 'Front End Mentor Challenge',
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
+      image: '/img/projects/qrCode.png',
+      github: 'https://github.com/RW2023/qrCode',
+      liveVersion: 'https://rw2023qrcode.netlify.app/',
+    },
     // ... (Add other projects here)
   ];
 
   return (
     <div className="container mx-auto p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 gap-4">
         {projects.map((project, index) => (
           <div
             className="card bordered max-w-md mx-auto my-4"
