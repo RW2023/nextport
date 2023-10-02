@@ -23,7 +23,10 @@ function Card() {
     {
       title: 'ComingSoon',
       description: 'Landing Page from Coding Boot-camp',
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
+      stack: [
+      <HtmlLogo key="html" />, 
+      <CssLogo key="css" />
+    ],
       image: '/img/projects/Coming-Soon.png',
       github: 'https://github.com/RW2023/ComingSoon',
       liveVersion: 'https://comingsoonfm.netlify.app/',
@@ -44,7 +47,10 @@ function Card() {
     {
       title: 'QrCode',
       description: 'Front End Mentor Challenge',
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
+      stack: [
+      <HtmlLogo key="html" />, 
+      <CssLogo key="css" />
+    ],
       image: '/img/projects/qrCode.png',
       github: 'https://github.com/RW2023/qrCode',
       liveVersion: 'https://rw2023qrcode.netlify.app/',
