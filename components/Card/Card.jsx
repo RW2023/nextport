@@ -4,13 +4,18 @@ import Link from 'next/link';
 import CssLogo from '../CssLogo/CssLogo';
 import HtmlLogo from '../HtmlLogo/HtmlLogo';
 import JsLogo from '../JsLogo/JsLogo';
+import ReactLogo from '../ReactLogo/ReactLogo';
 
 function Card() {
   let projects = [
     {
       title: 'Tip Calculator',
       description: 'Front End Mentor Challenge',
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />],
+      stack: [
+        <HtmlLogo key="html" />,
+        <CssLogo key="css" />,
+        <JsLogo key="js" />,
+      ],
       image: '/img/projects/tip.png',
       github: 'https://github.com/RW2023/tip-calculator-app-pfsc',
       liveVersion: 'https://femtipcalculator2023.netlify.app/',
@@ -22,6 +27,19 @@ function Card() {
       image: '/img/projects/Coming-Soon.png',
       github: 'https://github.com/RW2023/ComingSoon',
       liveVersion: 'https://comingsoonfm.netlify.app/',
+    },
+    {
+      title: 'Pokedex',
+      description: 'Pokedex game React Course',
+      stack: [
+        <HtmlLogo key="html" />,
+        <CssLogo key="css" />,
+        <JsLogo key="js" />,
+        <ReactLogo key="react" />,
+      ],
+      image: '/img/projects/PokeDex.png',
+      github: 'https://github.com/RW2023/pokedex',
+      liveVersion: 'https://rwpokegame.netlify.app/',
     },
     // ... (Add other projects here)
   ];
