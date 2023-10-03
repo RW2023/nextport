@@ -53,7 +53,7 @@ function Form() {
           </div>
           <button
             type="submit"
-            className="btn btn-accent w-full bg-button text-stroke"
+            className="btn btn-accent w-full bg-button text-stroke hover:bg-primary hover:border-stroke hover:text-headline"
           >
             Submit
           </button>
