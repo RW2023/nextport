@@ -80,6 +80,7 @@ function Card() {
 
   return (
     <div className="container mx-auto p-4">
+      <h1 className='text-4xl text-center'>Projects</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 gap-4 justify-center">
         {projects.map((project, index) => (
           <div
