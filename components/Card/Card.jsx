@@ -5,12 +5,14 @@ import CssLogo from '../CssLogo/CssLogo';
 import HtmlLogo from '../HtmlLogo/HtmlLogo';
 import JsLogo from '../JsLogo/JsLogo';
 import ReactLogo from '../ReactLogo/ReactLogo';
+import Figma from '../Figma/Figma';
 
 function Card() {
   let projects = [
     {
       title: 'Tip Calculator',
-      description: 'Front End Mentor Challenge',
+      description:
+        'This is a Front End Mentor Coding Challenge. I collaborated with a friend on this project. he did the majority of th css and i worked on the javascript. I scaffolded the html. This is  one of my first projects and one of my first times working as part of a team ',
       stack: [
         <HtmlLogo key="html" />,
         <CssLogo key="css" />,
@@ -22,7 +24,8 @@ function Card() {
     },
     {
       title: 'ComingSoon',
-      description: 'Landing Page from Coding Boot-camp',
+      description:
+        'This is a Landing Page from a Coding Boot-camp. This was also an early project. I was introduced to the concept of mobile first design. I had a lot of practice with flexbox, a concept that gave me a lot of trouble at the time. I also learned more about how to use media queries.',
       stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
       image: '/img/projects/Coming-Soon.png',
       github: 'https://github.com/RW2023/ComingSoon',
@@ -30,7 +33,17 @@ function Card() {
     },
     {
       title: 'Pokedex',
-      description: 'Pokedex game React Course',
+      description: (
+        <>
+          This was my inaugural project in
+          <span>
+            <ReactLogo />
+          </span>
+          React, where I got my hands dirty with state, props, and the
+          unidirectional data flow. Its a simple game and I could add a button so that you don't have to manually refresh it to get a new score.
+          I like it like this where the tutorial left it and so did I. I am tempted to "fix it" but I think it is good to have a record of where I was when I started.
+        </>
+      ),
       stack: [
         <HtmlLogo key="html" />,
         <CssLogo key="css" />,
@@ -41,14 +54,27 @@ function Card() {
       github: 'https://github.com/RW2023/pokedex',
       liveVersion: 'https://rwpokegame.netlify.app/',
     },
+
     {
       title: 'QrCode',
-      description: 'Front End Mentor Challenge',
+      description: (
+        <>
+          Another Front End Mentor Challenge. In this project I got to work with
+          <span>
+            <Figma />
+          </span>
+          figma for the first time. It was quite a useful tool to visualize what
+          you are attempting before you start coding. I was able to add little
+          touches like drop shadow and adjusting the border stroke to make it
+          pop a little bit more than called for.
+        </>
+      ),
       stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
       image: '/img/projects/qrCode.png',
       github: 'https://github.com/RW2023/qrCode',
       liveVersion: 'https://rw2023qrcode.netlify.app/',
     },
+
     // ... (Add other projects here)
   ];
 
