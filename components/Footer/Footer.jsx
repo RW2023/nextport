@@ -1,15 +1,16 @@
-import React from 'react'
-import image  from 'next/image'
-import NextLogo from '../NextLogo/NextLogo'
-import ReactLogo from '../ReactLogo/ReactLogo'
-import NodeLogo from '../NodeLogo/NodeLogo'
-import CssLogo from '../CssLogo/CssLogo'
-import HtmlLogo from '../HtmlLogo/HtmlLogo'
-import JsLogo from '../JsLogo/JsLogo'
-import TypscriptLogo from '../TypescriptLogo/TypscriptLogo'
-import Figma from '../Figma/Figma'
-import Git from '../Git/Git'
-import Mongo from '../Mongo/Mongo'
+import React from 'react';
+import Image from 'next/image';
+import NextLogo from '../NextLogo/NextLogo';
+import ReactLogo from '../ReactLogo/ReactLogo';
+import NodeLogo from '../NodeLogo/NodeLogo';
+import CssLogo from '../CssLogo/CssLogo';
+import HtmlLogo from '../HtmlLogo/HtmlLogo';
+import JsLogo from '../JsLogo/JsLogo';
+import TypscriptLogo from '../TypescriptLogo/TypscriptLogo';
+import Figma from '../Figma/Figma';
+import Git from '../Git/Git';
+import Mongo from '../Mongo/Mongo';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -65,22 +66,32 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex justify-center space-x-2 sm:space-x-4 mt-2">
-            <i className="fab fa-github text-2xl sm:text-3xl text-headline-900"></i>
-            <i className="fab fa-linkedin text-2xl sm:text-3xl text-blue-600"></i>
-            <i className="fab fa-discord text-2xl sm:text-3xl text-purple-600"></i>
+            <Link href="https://github.com/RW2023" aria-label="GitHub">
+              <i className="fab fa-github text-2xl sm:text-3xl text-headline-900"></i>
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/ryan-e-wilson//"
+              aria-label="LinkedIn"
+            >
+              <i className="fab fa-linkedin text-2xl sm:text-3xl text-blue-600"></i>
+            </Link>
+            <Link href="https://discord.gg/vdcqGdnhrX" aria-label="Discord">
+              <i className="fab fa-discord text-2xl sm:text-3xl text-purple-600"></i>
+            </Link>
           </div>
           <p className="mt-2">
             Copyright © 2023 - Ryan Wilson - All rights reserved
           </p>
         </aside>
         <div className="flex justify-between">
-          <a href="https://icons8.com/icon/o6OvAxG0nzTH/mongo-db" class></a>
-        Tech icon svg's by <a href="https://icons8.com">Icons8</a>
+          Tech icon SVGs by{' '}
+          <Link href="https://icons8.com" aria-label="Icons8 Website">
+            Icons8
+          </Link>
         </div>
       </footer>
     </div>
   );
-          }
+};
 
-          export default Footer;
-
+export default Footer;
