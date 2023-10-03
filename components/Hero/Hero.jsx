@@ -106,7 +106,7 @@ const Hero = () => {
             </h1>
             <p className="py-6 text-headline text-bounce">
               <i className="fa-solid fa-globe top-globe mr-4"></i>
-              Welcome to my Website
+              Welcome to my WebApp
               <i className="fa-solid fa-globe bottom-globe ml-4"></i>
             </p>
             <Link href="/welcome">
