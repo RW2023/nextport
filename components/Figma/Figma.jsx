@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 function Figma() {
   return (
-    <Link href="https://www.figma.com" newTab>
+    <Link href="https://www.figma.com">
       <div>
         <Img
           alt="Figma Logo"
