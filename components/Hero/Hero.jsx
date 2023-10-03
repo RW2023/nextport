@@ -76,7 +76,7 @@ const Hero = () => {
       <div className="hero min-h-screen relative">
         {/* Background Placeholder Image */}
         <Image
-          src="/img/backgroundRed.jpeg" // Corrected path and filename
+          src="/img/backgroundPlaceholderBlue.png" // Corrected path and filename
           id="video-placeholder"
           className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
           width={500}
@@ -92,7 +92,7 @@ const Hero = () => {
           autoPlay
           muted
         >
-          <source src="/code.mp4" type="video/mp4" />
+          <source src="/morph.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Content */}
