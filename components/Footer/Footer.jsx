@@ -70,7 +70,7 @@ const Footer = () => {
               <i className="fab fa-github text-2xl sm:text-3xl text-headline-900"></i>
             </Link>
             <Link
-              href="https://www.linkedin.com/in/ryan-e-wilson//"
+              href="https://www.linkedin.com/in/ryan-e-wilson/"
               aria-label="LinkedIn"
             >
               <i className="fab fa-linkedin text-2xl sm:text-3xl text-blue-600"></i>
