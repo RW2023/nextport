@@ -83,7 +83,7 @@ function Card() {
       title: 'Portfolio',
       description: (
         <>
-          This is my portfolio. I built it with Next Js
+          This is my portfolio. I built it with NextJs 13
           <span>
             <NextLogo />
           </span>
