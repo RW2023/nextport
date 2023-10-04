@@ -6,6 +6,8 @@ import HtmlLogo from '../HtmlLogo/HtmlLogo';
 import JsLogo from '../JsLogo/JsLogo';
 import ReactLogo from '../ReactLogo/ReactLogo';
 import Figma from '../Figma/Figma';
+import NextLogo from '../NextLogo/NextLogo';
+import NodeLogo from '../NodeLogo/NodeLogo';
 
 function Card() {
   let projects = [
@@ -40,8 +42,11 @@ function Card() {
             <ReactLogo />
           </span>
           React, where I got my hands dirty with state, props, and the
-          unidirectional data flow. Its a simple game and I could add a button so that you don't have to manually refresh it to get a new score.
-          I like it like this where the tutorial left it and so did I. I am tempted to "fix it" but I think it is good to have a record of where I was when I started.
+          unidirectional data flow. Its a simple game and I could add a button
+          so that you don't have to manually refresh it to get a new score. I
+          like it like this where the tutorial left it and so did I. I am
+          tempted to "fix it" but I think it is good to have a record of where I
+          was when I started.
         </>
       ),
       stack: [
@@ -73,6 +78,23 @@ function Card() {
       image: '/img/projects/qrCode.png',
       github: 'https://github.com/RW2023/qrCode',
       liveVersion: 'https://rw2023qrcode.netlify.app/',
+    },
+    {
+      title: 'Portfolio',
+      description: (
+        <>
+          This is my portfolio. I built it with Next Js
+          <span>
+            <NextLogo />
+          </span>
+          It is the site you are currently on. 
+          I used Tailwind CSS for the styling. I also augmented the styling by using the Daisy UI library
+        </>
+      ),
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />, <NodeLogo />, <ReactLogo key="react" />, <NextLogo key="next" /> ],
+      image: '/img/projects/portfolio.png',
+      github: 'https://github.com/RW2023/nextport',
+      liveVersion: 'nextport-alpha.vercel.app',
     },
 
     // ... (Add other projects here)
