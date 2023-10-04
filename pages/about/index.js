@@ -13,7 +13,9 @@ function About() {
         data-theme="black"
       >
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-8">About Me</h1>
+          <h1 className="text-4xl font-bold mb-8">
+            <span className="fa-solid fa-circle-info mr-3"></span>About Me
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="card bordered hover:bg-stroke hover:shadow-xl transition ease-in-out duration-200 transform hover:scale-105">
               <figure>
@@ -54,20 +56,28 @@ function About() {
                 My next brush with programming was just out of high school. I
                 was working a tech support job supporting Dell PC Hardware at
                 the time. A girlfriend gifted me a book. It was a book on
-                programming in C++. I struggled through the first chapter.  It was then I was sure programming was not for me. I read
-                the first chapter and it seemed like every single concept was
-                over my head. I was so discouraged I gave up. I didn't think I
-                would ever be a programmer. I felt like coding was just not for
-                me.
+                programming in C++. I struggled through the first chapter. It
+                was then I was sure programming was not for me. I read the first
+                chapter and it seemed like every single concept was over my
+                head. I was so discouraged I gave up. I didn't think I would
+                ever be a programmer. I felt like coding was just not for me.
               </p>
               <p className="text-l">
-                My next brush with was in my mid 40's. The pandemic was raging and my brain was not happy. I still could not shake this desire to learn how to code</p>
-                I decided i would give it the final do, not try. It never ends. which is one of the things i like the most about it. there is always another door to open. A deeper level of 
-                understanding that  can be reached. Here I am. Courses and videos later. I am a junior full stack developer. I am still learning which may be painfully obvious. I am here though 👋🏾. 
-
-
+                My next brush with was in my mid 40's. The pandemic was raging
+                and my brain was not happy. I still could not shake this desire
+                to learn how to code
+              </p>
+              I decided i would give it the final do, not try. It never ends.
+              which is one of the things i like the most about it. there is
+              always another door to open. A deeper level of understanding that
+              can be reached. Here I am. Courses and videos later. I am a junior
+              full stack developer. I am still learning which may be painfully
+              obvious. I am here though 👋🏾.
               <p className="text-l">
-                I chose the MERN stack because I wanted to learn the most popular stack. I also wanted to learn a stack that would allow me to build a full application. I am glad I chose it. Next JS is a very nice Dev tool 😁
+                I chose the MERN stack because I wanted to learn the most
+                popular stack. I also wanted to learn a stack that would allow
+                me to build a full application. I am glad I chose it. Next JS is
+                a very nice Dev tool 😁
               </p>
             </div>
           </div>
