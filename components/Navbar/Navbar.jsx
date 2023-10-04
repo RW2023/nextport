@@ -9,7 +9,7 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <div className="w-full bg-black fixed top-0 left-0 right-0 z-10 mb-4">
+    <div className="w-full bg-black fixed top-0 left-0 right-0 z-10 mb-1">
       <div className="justify-between px-4 mx-auto md:items-center md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           {/* LOGO */}
