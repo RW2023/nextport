@@ -98,7 +98,10 @@ const Hero = () => {
         {/* Content */}
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h2 className="text-4xl text-headline">Hi I am </h2>
+            <h2 className="text-4xl text-headline">
+              <span className="fa-solid fa-hand m-3 text-nubian text-8xl"></span>
+              Hi I am{' '}
+            </h2>
             <h1 className="text-5xl font-bold">
               <i className="fa-solid fa-laptop-code fly-in-left mr-4"></i>
               <span className="color-animate">Ryan</span>
