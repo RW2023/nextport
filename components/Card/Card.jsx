@@ -91,7 +91,7 @@ function Card() {
           I used Tailwind CSS for the styling. I also augmented the styling by using the Daisy UI library
         </>
       ),
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />, <NodeLogo />, <ReactLogo key="react" />, <NextLogo key="next" /> ],
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />, <NodeLogo key='node' />, <ReactLogo key="react" />, <NextLogo key="next" /> ],
       image: '/img/projects/portfolio.png',
       github: 'https://github.com/RW2023/nextport',
       liveVersion: 'nextport-alpha.vercel.app',
