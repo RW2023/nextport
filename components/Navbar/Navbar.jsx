@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -13,7 +14,7 @@ function Navbar() {
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           {/* LOGO */}
           <Link href="/">
-            <div className="cursor-pointer">RW</div>
+            <div className="cursor-pointer text-2xl">RW</div>
           </Link>
           {/* HAMBURGER BUTTON FOR MOBILE */}
           <div className="md:hidden">
@@ -30,7 +31,7 @@ function Navbar() {
             navbar ? 'block' : 'hidden md:block'
           }`}
         >
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-2xl">
             <li>
               <Link href="/">Home</Link>
             </li>
