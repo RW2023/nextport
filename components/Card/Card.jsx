@@ -88,7 +88,8 @@ function Card() {
             <NextLogo />
           </span>
           It is the site you are currently on. 
-          I used Tailwind CSS for the styling. I also augmented the styling by using the Daisy UI library
+          I used Tailwind CSS for the styling. I also augmented the styling by using the Daisy UI library. The live version link 
+          would be a circular thing. instead you can check out my custom error page. I will keep working on it 😊
         </>
       ),
       stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />, <NodeLogo key='node' />, <ReactLogo key="react" />, <NextLogo key="next" /> ],
