@@ -8,6 +8,7 @@ import ReactLogo from '../ReactLogo/ReactLogo';
 import Figma from '../Figma/Figma';
 import NextLogo from '../NextLogo/NextLogo';
 import NodeLogo from '../NodeLogo/NodeLogo';
+import Tailwind from '../Tailwind/Tailwind';
 
 function Card() {
   let projects = [
@@ -92,7 +93,7 @@ function Card() {
           would be a circular thing. instead you can check out my custom error page. I will keep working on it 😊
         </>
       ),
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />, <NodeLogo key='node' />, <ReactLogo key="react" />, <NextLogo key="next" /> ],
+      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <Tailwind key='tailwind' />, <JsLogo key="js" />, <NodeLogo key='node' />, <ReactLogo key="react" />, <NextLogo key="next" /> ],
       image: '/img/projects/portfolio.png',
       github: 'https://github.com/RW2023/nextport',
       liveVersion: 'nextport-alpha.vercel.app',
