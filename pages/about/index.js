@@ -9,7 +9,7 @@ function About() {
     <>
       <Navbar />
       <div
-        className="bg-gray-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8 text-white"
+        className="bg-gray-900 min-h-screen py-12 px-4 sm:px-6 lg:px-8 sm:mt-7 text-white"
         data-theme="black"
       >
         <div className="container mx-auto text-center">
