@@ -9,7 +9,7 @@ function Projects() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 pt-20">
         <Card />
         {/* Manually add your project cards here */}
       </div>

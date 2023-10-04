@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import HamburgerMenu from '../Hamburger/Hamburger';
 
+
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
 
@@ -12,9 +13,7 @@ function Navbar() {
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           {/* LOGO */}
           <Link href="/">
-            <h2 className="text-2xl text-cyan-600 font-bold cursor-pointer">
-              RW
-            </h2>
+            <div className="cursor-pointer">RW</div>
           </Link>
           {/* HAMBURGER BUTTON FOR MOBILE */}
           <div className="md:hidden">
