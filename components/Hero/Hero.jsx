@@ -73,7 +73,7 @@ const Hero = () => {
   return (
     <>
       <Navbar />
-      <div className="hero min-h-screen relative">
+      <div className="hero min-h-screen relative pt-20">
         {/* Background Placeholder Image */}
         <Image
           src="/img/backgroundPlaceholderBlue.png" // Corrected path and filename
