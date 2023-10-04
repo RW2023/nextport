@@ -6,7 +6,7 @@ NextPort 2023 is a portfolio website built with Next.js 13. It showcases project
 
 🔗 [Live Site](https://nextport2023.netlify.app/)
 
-![Screenshot of NextPort 2023](screenshot.png)
+![Screenshot of NextPort 2023](./public/img/projects/portfolio.png)
 
 ## 🚀 Features
 
