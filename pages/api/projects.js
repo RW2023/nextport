@@ -7,8 +7,6 @@ export default async function handler(req, res) {
 
   const uri = process.env.MONGODB_URI;
   const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
   });
 
   try {
