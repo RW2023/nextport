@@ -10,6 +10,7 @@ import Figma from '../Figma/Figma';
 import NextLogo from '../NextLogo/NextLogo';
 import NodeLogo from '../NodeLogo/NodeLogo';
 import Tailwind from '../Tailwind/Tailwind';
+import Mongo from '../Mongo/Mongo';
 
 const getTechLogo = (tech) => {
   switch (tech) {
@@ -29,6 +30,8 @@ const getTechLogo = (tech) => {
       return <NodeLogo key="node" />;
     case 'Tailwind':
       return <Tailwind key="tailwind" />;
+      case 'Mongo':
+        return <Mongo key="mongo" />;
     default:
       return null;
   }
