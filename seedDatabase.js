@@ -1,11 +1,12 @@
+require('dotenv').config();
+const { MongoClient } = require('mongodb');
+
+require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
 async function seedDatabase() {
-  const uri = 'mongodb+srv://username:password@cluster.mongodb.net/dbname';
-  const client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  const uri = process.env.MONGODB_URI;
+  const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
   try {
     await client.connect();
@@ -24,6 +25,8 @@ async function seedDatabase() {
 
     await collection.insertMany(projects);
     console.log('Data seeded successfully');
+  } catch (error) {
+    console.error(error);
   } finally {
     await client.close();
   }
