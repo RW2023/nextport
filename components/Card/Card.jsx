@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
 import CssLogo from '../CssLogo/CssLogo';
@@ -8,102 +9,51 @@ import ReactLogo from '../ReactLogo/ReactLogo';
 import Figma from '../Figma/Figma';
 import NextLogo from '../NextLogo/NextLogo';
 import NodeLogo from '../NodeLogo/NodeLogo';
+import Tailwind from '../Tailwind/Tailwind';
+import Mongo from '../Mongo/Mongo';
+
+const getTechLogo = (tech) => {
+  switch (tech) {
+    case 'HTML':
+      return <HtmlLogo key="html" />;
+    case 'CSS':
+      return <CssLogo key="css" />;
+    case 'JS':
+      return <JsLogo key="js" />;
+    case 'React':
+      return <ReactLogo key="react" />;
+    case 'Figma':
+      return <Figma key="figma" />;
+    case 'Next':
+      return <NextLogo key="next" />;
+    case 'Node':
+      return <NodeLogo key="node" />;
+    case 'Tailwind':
+      return <Tailwind key="tailwind" />;
+      case 'Mongo':
+        return <Mongo key="mongo" />;
+    default:
+      return null;
+  }
+};
 
 function Card() {
-  let projects = [
-    {
-      title: 'Tip Calculator',
-      description:
-        'This is a Front End Mentor Coding Challenge. I collaborated with a friend on this project. he did the majority of th css and i worked on the javascript. I scaffolded the html. This is  one of my first projects and one of my first times working as part of a team ',
-      stack: [
-        <HtmlLogo key="html" />,
-        <CssLogo key="css" />,
-        <JsLogo key="js" />,
-      ],
-      image: '/img/projects/tip.png',
-      github: 'https://github.com/RW2023/tip-calculator-app-pfsc',
-      liveVersion: 'https://femtipcalculator2023.netlify.app/',
-    },
-    {
-      title: 'ComingSoon',
-      description:
-        'This is a Landing Page from a Coding Boot-camp. This was also an early project. I was introduced to the concept of mobile first design. I had a lot of practice with flexbox, a concept that gave me a lot of trouble at the time. I also learned more about how to use media queries.',
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
-      image: '/img/projects/Coming-Soon.png',
-      github: 'https://github.com/RW2023/ComingSoon',
-      liveVersion: 'https://comingsoonfm.netlify.app/',
-    },
-    {
-      title: 'Pokedex',
-      description: (
-        <>
-          This was my inaugural project in
-          <span>
-            <ReactLogo />
-          </span>
-          React, where I got my hands dirty with state, props, and the
-          unidirectional data flow. Its a simple game and I could add a button
-          so that you don't have to manually refresh it to get a new score. I
-          like it like this where the tutorial left it and so did I. I am
-          tempted to "fix it" but I think it is good to have a record of where I
-          was when I started.
-        </>
-      ),
-      stack: [
-        <HtmlLogo key="html" />,
-        <CssLogo key="css" />,
-        <JsLogo key="js" />,
-        <ReactLogo key="react" />,
-      ],
-      image: '/img/projects/PokeDex.png',
-      github: 'https://github.com/RW2023/pokedex',
-      liveVersion: 'https://rwpokegame.netlify.app/',
-    },
+  const [projects, setProjects] = useState([]);
 
-    {
-      title: 'QrCode',
-      description: (
-        <>
-          Another Front End Mentor Challenge. In this project I got to work with
-          <span>
-            <Figma />
-          </span>
-          figma for the first time. It was quite a useful tool to visualize what
-          you are attempting before you start coding. I was able to add little
-          touches like drop shadow and adjusting the border stroke to make it
-          pop a little bit more than called for.
-        </>
-      ),
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />],
-      image: '/img/projects/qrCode.png',
-      github: 'https://github.com/RW2023/qrCode',
-      liveVersion: 'https://rw2023qrcode.netlify.app/',
-    },
-    {
-      title: 'Portfolio',
-      description: (
-        <>
-          This is my portfolio. I built it with NextJs 13
-          <span>
-            <NextLogo />
-          </span>
-          It is the site you are currently on. 
-          I used Tailwind CSS for the styling. I also augmented the styling by using the Daisy UI library. The live version link 
-          would be a circular thing. instead you can check out my custom error page. I will keep working on it 😊
-        </>
-      ),
-      stack: [<HtmlLogo key="html" />, <CssLogo key="css" />, <JsLogo key="js" />, <NodeLogo key='node' />, <ReactLogo key="react" />, <NextLogo key="next" /> ],
-      image: '/img/projects/portfolio.png',
-      github: 'https://github.com/RW2023/nextport',
-      liveVersion: 'nextport-alpha.vercel.app',
-    },
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('/api/projects'); // Replace with your API endpoint
+      setProjects(response.data);
+    };
 
-    // ... (Add other projects here)
-  ];
+    fetchData();
+  }, []);
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className='text-4xl text-center'><span className='fa fa-briefcase mr-3'></span>Projects</h1>
+      <h1 className="text-4xl text-center">
+        <span className="fa fa-briefcase mr-3"></span>Projects
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 gap-4 justify-center">
         {projects.map((project, index) => (
           <div
@@ -125,9 +75,9 @@ function Card() {
               <div className="flex flex-wrap space-x-2">
                 <h3 className="text-xl">Tech Stack:</h3>
                 {project.stack &&
-                  project.stack.map((TechLogo, i) => (
+                  project.stack.map((tech, i) => (
                     <div key={i} className="tech-logo">
-                      {TechLogo}
+                      {getTechLogo(tech)}
                     </div>
                   ))}
               </div>
