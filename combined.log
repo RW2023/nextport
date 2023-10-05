@@ -1,0 +1,2 @@
+{"level":"warn","message":"All fields are required","service":"your-service-name"}
+{"level":"info","message":"[05/Oct/2023:18:34:59 +0000] - POST /api/addProject 400 6.881 ms - 35","service":"your-service-name"}
