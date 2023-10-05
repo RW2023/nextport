@@ -10,11 +10,14 @@ NextPort 2023 is a portfolio website built with Next.js 13. It showcases project
 
 ## 🚀 Features
 
-- 📱 Responsive design
-- ⚡ Fast page loads
-- 🖥️ Client-side rendering with Next.js 13
-- 🎨 Tailwind CSS for styling
-- 🍔 Custom Navbar with Hamburger Menu
+📱 Responsive design
+⚡ Fast page loads
+🖥️ Client-side rendering with Next.js 13
+🎨 Tailwind CSS for styling
+🍔 Custom Navbar with Hamburger Menu
+🗃️ MongoDB integration for dynamic content
+🌐 Cloud deployment with MongoDB Atlas
+🛡️ Environment variables for secure database connection
 
 ## 🛠️ Installation
 
