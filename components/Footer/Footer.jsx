@@ -11,6 +11,7 @@ import Figma from '../Figma/Figma';
 import Git from '../Git/Git';
 import Mongo from '../Mongo/Mongo';
 import Link from 'next/link';
+import Tailwind from '../Tailwind/Tailwind';
 
 const Footer = () => {
   return (
@@ -43,6 +44,10 @@ const Footer = () => {
             <div className="flex flex-col items-center">
               <CssLogo />
               <p>CSS3</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Tailwind />
+              <p>Tailwind</p>
             </div>
             <div className="flex flex-col items-center">
               <Figma />
