@@ -11,6 +11,8 @@ import NextLogo from '../NextLogo/NextLogo';
 import NodeLogo from '../NodeLogo/NodeLogo';
 import Tailwind from '../Tailwind/Tailwind';
 import Mongo from '../Mongo/Mongo';
+import TypescriptLogo from '../TypescriptLogo/TypscriptLogo';
+
 
 const getTechLogo = (tech) => {
   switch (tech) {
@@ -30,8 +32,11 @@ const getTechLogo = (tech) => {
       return <NodeLogo key="node" />;
     case 'Tailwind':
       return <Tailwind key="tailwind" />;
-      case 'Mongo':
-        return <Mongo key="mongo" />;
+    case 'Mongo':
+      return <Mongo key="mongo" />;
+    case 'TypeScript':
+      return <TypescriptLogo key="TypeScript" />;
+
     default:
       return null;
   }
