@@ -2,7 +2,7 @@ import React from 'react';
 import 'daisyui/dist/full.css';
 import Navbar from '@/components/Navbar/Navbar';
 import Footer from '@/components/Footer/Footer';
-import Image from 'next/image';
+import GitHub from '@/components/github/github';
 
 function About() {
   return (
@@ -18,7 +18,8 @@ function About() {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="card bordered hover:bg-stroke hover:shadow-xl transition ease-in-out duration-200 transform hover:scale-105">
-              <figure>
+              <GitHub />
+              {/* <figure>
                 <Image
                   src="/img/me.jpg"
                   alt="A picture of Ryan Wilson"
@@ -26,7 +27,7 @@ function About() {
                   width={240} // Set the width
                   height={240} // Set the height
                 />
-              </figure>
+              </figure> */}
             </div>
             <div className="card bordered p-6 hover:bg-stroke hover:shadow-xl transition ease-in-out duration-200 transform hover:scale-105 text-left space-y-4">
               <p className="text-l">
