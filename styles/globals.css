@@ -16,17 +16,7 @@
   --tertiary: #eebbc3;
 }
 
-/* CSS Reset */
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  min-height: 100%;
-  min-width: 100vh;
-}
-
-/* End of CSS Reset */
 
 body {
   font-family: 'Poppins', sans-serif;
