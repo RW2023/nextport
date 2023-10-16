@@ -11,6 +11,7 @@ import NextLogo from '../NextLogo/NextLogo';
 import NodeLogo from '../NodeLogo/NodeLogo';
 import Tailwind from '../Tailwind/Tailwind';
 import Mongo from '../Mongo/Mongo';
+import Loading from '../Loading/Loading'; // Adjust the path to where your Loading.js is
 
 const getTechLogo = (tech) => {
   switch (tech) {
@@ -30,8 +31,8 @@ const getTechLogo = (tech) => {
       return <NodeLogo key="node" />;
     case 'Tailwind':
       return <Tailwind key="tailwind" />;
-      case 'Mongo':
-        return <Mongo key="mongo" />;
+    case 'Mongo':
+      return <Mongo key="mongo" />;
     default:
       return null;
   }
@@ -39,11 +40,14 @@ const getTechLogo = (tech) => {
 
 function Card() {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get('/api/projects'); // Replace with your API endpoint
+      setLoading(true);
+      const response = await axios.get('/api/projects');
       setProjects(response.data);
+      setLoading(false);
     };
 
     fetchData();
@@ -54,54 +58,61 @@ function Card() {
       <h1 className="text-4xl text-center">
         <span className="fa fa-briefcase mr-3"></span>Projects
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 gap-4 justify-center">
-        {projects.map((project, index) => (
-          <div
-            className="card bordered max-w-md w-full mx-auto my-4"
-            data-theme="luxury"
-            key={index}
-          >
-            <figure>
-              <Image
-                src={project.image}
-                width={500}
-                height={500}
-                alt={project.title}
-              />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-2xl">{project.title}</h2>
-              <p>{project.description}</p>
-              <div className="flex flex-wrap space-x-2">
-                <h3 className="text-xl">Tech Stack:</h3>
-                {project.stack &&
-                  project.stack.map((tech, i) => (
-                    <div key={i} className="tech-logo">
-                      {getTechLogo(tech)}
-                    </div>
-                  ))}
-              </div>
-              <div className="card-actions">
-                <Link href={project.github} aria-label="View project on GitHub">
-                  <button className="btn btn-primary bg-button border-stroke text-stroke ">
-                    View on GitHub
-                  </button>
-                </Link>
-                {project.liveVersion && (
+      {loading ? (
+        <Loading text="Projects" />
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 gap-4 justify-center">
+          {projects.map((project, index) => (
+            <div
+              className="card bordered max-w-md w-full mx-auto my-4"
+              data-theme="luxury"
+              key={index}
+            >
+              <figure>
+                <Image
+                  src={project.image}
+                  width={500}
+                  height={500}
+                  alt={project.title}
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title text-2xl">{project.title}</h2>
+                <p>{project.description}</p>
+                <div className="flex flex-wrap space-x-2">
+                  <h3 className="text-xl">Tech Stack:</h3>
+                  {project.stack &&
+                    project.stack.map((tech, i) => (
+                      <div key={i} className="tech-logo">
+                        {getTechLogo(tech)}
+                      </div>
+                    ))}
+                </div>
+                <div className="card-actions">
                   <Link
-                    href={project.liveVersion}
-                    aria-label="View live version of project"
+                    href={project.github}
+                    aria-label="View project on GitHub"
                   >
-                    <button className="btn btn-secondary bg-stroke border-headline hover:bg-primary hover:border-stroke hover:text-stroke">
-                      Live Version
+                    <button className="btn btn-primary bg-button border-stroke text-stroke">
+                      View on GitHub
                     </button>
                   </Link>
-                )}
+                  {project.liveVersion && (
+                    <Link
+                      href={project.liveVersion}
+                      aria-label="View live version of project"
+                    >
+                      <button className="btn btn-secondary bg-stroke border-headline hover:bg-primary hover:border-stroke hover:text-stroke">
+                        Live Version
+                      </button>
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

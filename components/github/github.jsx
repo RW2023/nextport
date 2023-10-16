@@ -1,14 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import { useQuery } from '@apollo/client';
 import { GET_GITHUB_PROFILE } from '../../lib/queries';
-import apolloClient from '../../lib/apolloClient'; // Adjusted import path
+import apolloClient from '../../lib/apolloClient'; 
+import Loading from '../Loading/Loading'; 
 
 function GitHub() {
   const { loading, error, data } = useQuery(GET_GITHUB_PROFILE, {
     client: apolloClient,
   });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading text="GitHub Data" />;
   if (error) return <p>Error: {error.message}</p>;
 
   const { viewer } = data;
