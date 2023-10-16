@@ -10,8 +10,7 @@ function Welcome() {
       <div
         className="flex flex-wrap justify-center items-center min-h-screen dark:bg-gray-900 border-stroke"
         data-theme="black"
-        className="flex flex-wrap justify-center items-center min-h-screen dark:bg-gray-900 border-stroke mt-20"
-        data-theme="black"
+     
       >
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-extrabold text-center mb-4">
