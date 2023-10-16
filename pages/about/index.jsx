@@ -64,7 +64,7 @@ function About() {
                 ever be a programmer. I felt like coding was just not for me.
               </p>
               <p className="text-l">
-                My next brush with was in my mid 40's. The pandemic was raging
+                My latest brush with coding, in my mid 40's is the most fulfilling. The pandemic was raging
                 and my brain was not happy. I still could not shake this desire
                 to learn how to code
               </p>
