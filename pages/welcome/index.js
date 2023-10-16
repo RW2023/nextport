@@ -1,5 +1,4 @@
 import Footer from '@/components/Footer/Footer';
-import Navbar from '@/components/Navbar/Navbar';
 import React from 'react';
 import Image from 'next/image';
 import 'daisyui/dist/full.css';
@@ -7,10 +6,9 @@ import 'daisyui/dist/full.css';
 function Welcome() {
   return (
     <>
-      <Navbar />
       <div
-        className="flex flex-wrap justify-center items-center min-h-screen dark:bg-gray-900 border-stroke"
-        data-theme="dark"
+        className="flex flex-wrap justify-center items-center min-h-screen dark:bg-gray-900 border-stroke mt-20"
+        data-theme="black"
       >
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-extrabold text-center mb-4">
