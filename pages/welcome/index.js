@@ -7,7 +7,7 @@ import Link from 'next/link';
 function Welcome() {
   return (
       <div
-        className="flex flex-wrap justify-center items-center min-h-screen dark:bg-gray-900 border-stroke mt-10"
+        className="flex flex-wrap justify-center items-center min-h-screen dark:bg-gray-900 border-stroke mt-20 p-6 sm:pt-10 md:pt-10 lg:mt-10"
         data-theme="black"
      
       >
