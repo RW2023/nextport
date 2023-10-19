@@ -1,11 +1,10 @@
-import Footer from '@/components/Footer/Footer';
+//pages/index.js
 import Hero from '@/components/Hero/Hero';
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <Footer />
     </div>
   );
 }
