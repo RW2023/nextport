@@ -1,4 +1,6 @@
 
+import Footer from '@/components/Footer/Footer';
+import Navbar from '@/components/Navbar/Navbar';
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
@@ -14,10 +16,12 @@ export default function Document() {
         <meta name="author" content="Ryan Wilson" />
         <meta name="keywords" content="Ryan Wilson, Portfolio, Web Developer, Software Developer, Front End Developer, Back End Developer, Full Stack Developer, React, Next.js, Junior Developer, London, Ontario, Canada, Web Development, Coding, Programming, Software Engineering, Responsive Design, UI/UX, JavaScript, HTML, CSS, Node.js, Express, MongoDB, Git, GitHub, Version Control" />
       </Head>
+      <Navbar />
       <body>
         <Main />
         <NextScript />
       </body>
+      <Footer />
     </Html>
   );
 }
