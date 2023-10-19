@@ -64,7 +64,7 @@ function Card() {
       {loading ? (
         <Loading text="Projects" />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project, index) => (
             <div
               className="card bordered max-w-md w-full mx-auto my-4"
