@@ -1,5 +1,5 @@
 // Hero.js
-// 'use client';
+'use client';
 import React, { useEffect, useState, useRef } from 'react';
 import anime from 'animejs'; // Make sure animejs is installed
 import Link from 'next/link';
