@@ -1,7 +1,6 @@
 // Hero.js
 // 'use client';
 import React, { useEffect, useState, useRef } from 'react';
-import Navbar from '../Navbar/Navbar'; // Adjust this path if needed
 import anime from 'animejs'; // Make sure animejs is installed
 import Link from 'next/link';
 import Image from 'next/image';
@@ -71,8 +70,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <>
-      <Navbar />
+    
       <div className="hero min-h-screen relative pt-15">
         {/* Background Placeholder Image */}
         <Image
@@ -131,7 +129,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

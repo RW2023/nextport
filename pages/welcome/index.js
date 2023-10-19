@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer/Footer';
+
 import React from 'react';
 import Image from 'next/image';
 import 'daisyui/dist/full.css';
@@ -86,7 +86,7 @@ function Welcome() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }
