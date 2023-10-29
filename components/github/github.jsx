@@ -24,9 +24,9 @@ function GitHub() {
         className="rounded-full w-24 h-24 mx-auto"
       />
       <h1 className="text-2xl font-bold mt-4">{name}</h1>
-      <p className="text-gray-700 mt-2">{bio}</p>
+      <p className="text-headline mt-2">{bio}</p>
 
-      <h2 className="text-xl font-semibold mt-6">GitHub Activity</h2>
+      <h2 className="text-xl font-semibold mt-6 text-headline">GitHub Activity</h2>
       <div className="grid grid-cols-2 gap-4 mt-4">
         <p>Total Commits: {contributionsCollection.totalCommitContributions}</p>
         <p>Total Issues: {contributionsCollection.totalIssueContributions}</p>
@@ -40,14 +40,14 @@ function GitHub() {
         </p>
       </div>
 
-      <h2 className="text-xl font-semibold mt-6">Recent Repositories</h2>
+      <h2 className="text-xl font-semibold mt-6 text-headline">Recent Repositories</h2>
       <ul className="list-disc list-inside mt-4">
         {repositories.nodes.map((repo) => (
           <li key={repo.name} className="mt-2">
             <h3 className="font-bold">{repo.name}</h3>
-            <p className="text-gray-700">{repo.description}</p>
-            <p className="text-gray-500 text-sm">Forks: {repo.forkCount}</p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-headline">{repo.description}</p>
+            <p className="text-headline text-sm">Forks: {repo.forkCount}</p>
+            <p className="text-headline text-sm">
               Updated At: {new Date(repo.updatedAt).toLocaleDateString()}
             </p>
           </li>
