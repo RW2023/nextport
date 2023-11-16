@@ -1,58 +1,80 @@
-/* eslint-disable @next/next/no-img-element */
-import { useQuery } from '@apollo/client';
-import { GET_GITHUB_PROFILE } from '../../lib/queries';
-import apolloClient from '../../lib/apolloClient'; 
-import Loading from '../Loading/Loading'; 
+import { useEffect, useState } from 'react';
+import Loading from '../Loading/Loading';
 
 function GitHub() {
-  const { loading, error, data } = useQuery(GET_GITHUB_PROFILE, {
-    client: apolloClient,
-  });
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch('/api/github')
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
 
   if (loading) return <Loading text="GitHub Data" />;
   if (error) return <p>Error: {error.message}</p>;
+  if (!data) return null;
 
-  const { viewer } = data;
-  const { name, avatarUrl, bio, repositories, contributionsCollection } =
-    viewer;
+  const { user, repos } = data;
+  const {
+    login,
+    avatar_url,
+    bio,
+    html_url,
+    public_repos,
+    followers,
+    following,
+  } = user;
 
   return (
     <div className="about-page p-6">
       <img
-        src={avatarUrl}
-        alt={`${name}'s avatar`}
-        className="rounded-full w-24 h-24 mx-auto"
+        src={avatar_url}
+        alt={`${login}'s avatar`}
+        className="rounded-full w-48 h-48 mx-auto"
       />
-      <h1 className="text-2xl font-bold mt-4">{name}</h1>
-      <p className="text-headline mt-2">{bio}</p>
-
-      <h2 className="text-xl font-semibold mt-6 text-headline">GitHub Activity</h2>
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        <p>Total Commits: {contributionsCollection.totalCommitContributions}</p>
-        <p>Total Issues: {contributionsCollection.totalIssueContributions}</p>
-        <p>
-          Total Pull Requests:{' '}
-          {contributionsCollection.totalPullRequestContributions}
-        </p>
-        <p>
-          Total Repositories:{' '}
-          {contributionsCollection.totalRepositoryContributions}
-        </p>
+      <h1 className="text-2xl font-bold mt-4">{login}</h1>
+      <p className="text-gray-600 mt-2">{bio || 'No bio available'}</p>
+      <a
+        href={html_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 mt-2"
+      >
+        View GitHub Profile
+      </a>
+      <div className="mt-4">
+        <p>Public Repositories: {public_repos}</p>
+        <p>Followers: {followers}</p>
+        <p>Following: {following}</p>
+        <div className="mt-4">
+          <h3 className="text-lg font-semibold">Recent Repositories:</h3>
+          <ul>
+            {repos.slice(0, 5).map((repo) => (
+              <li key={repo.id} className="mt-2">
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  {repo.name}
+                </a>
+                <p>{repo.description || 'No description'}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-
-      <h2 className="text-xl font-semibold mt-6 text-headline">Recent Repositories</h2>
-      <ul className="list-disc list-inside mt-4">
-        {repositories.nodes.map((repo) => (
-          <li key={repo.name} className="mt-2">
-            <h3 className="font-bold">{repo.name}</h3>
-            <p className="text-headline">{repo.description}</p>
-            <p className="text-headline text-sm">Forks: {repo.forkCount}</p>
-            <p className="text-headline text-sm">
-              Updated At: {new Date(repo.updatedAt).toLocaleDateString()}
-            </p>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }
