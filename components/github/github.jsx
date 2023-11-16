@@ -60,24 +60,6 @@ function GitHub() {
         <p>Public Repositories: {public_repos}</p>
         <p>Followers: {followers}</p>
         <p>Following: {following}</p>
-        {/* <div className="mt-4">
-          <h3 className="text-lg font-semibold">Recent Repositories:</h3>
-          <ul>
-            {repos.slice(0, 5).map((repo) => (
-              <li key={repo.id} className="mt-2">
-                <a
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:text-blue-700"
-                >
-                  {repo.name}
-                </a>
-                <p>{repo.description || 'No description'}</p>
-              </li>
-            ))}
-          </ul>
-        </div> */}
       </div>
     </div>
   );
