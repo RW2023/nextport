@@ -47,7 +47,7 @@ function GitHub() {
         className="rounded-full mx-auto"
       />
       <h1 className="text-2xl font-bold mt-4">{login}</h1>
-      <p className="mt-2">{bio || 'I am going to write it :('}</p>
+      <p className="mt-2">{bio || '⬇️See Bio ➡️'}</p>
       <a
         href={html_url}
         target="_blank"
@@ -60,7 +60,7 @@ function GitHub() {
         <p>Public Repositories: {public_repos}</p>
         <p>Followers: {followers}</p>
         <p>Following: {following}</p>
-        <div className="mt-4">
+        {/* <div className="mt-4">
           <h3 className="text-lg font-semibold">Recent Repositories:</h3>
           <ul>
             {repos.slice(0, 5).map((repo) => (
@@ -77,7 +77,7 @@ function GitHub() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
