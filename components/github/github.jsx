@@ -1,5 +1,7 @@
+'use client';
 import { useEffect, useState } from 'react';
 import Loading from '../Loading/Loading';
+import Image from 'next/image';
 
 function GitHub() {
   const [data, setData] = useState(null);
@@ -37,18 +39,20 @@ function GitHub() {
 
   return (
     <div className="about-page p-6">
-      <img
+      <Image
         src={avatar_url}
         alt={`${login}'s avatar`}
-        className="rounded-full w-48 h-48 mx-auto"
+        width={200}
+        height={200}
+        className="rounded-full mx-auto"
       />
       <h1 className="text-2xl font-bold mt-4">{login}</h1>
-      <p className="text-gray-600 mt-2">{bio || 'No bio available'}</p>
+      <p className="mt-2">{bio || 'I am going to write it :('}</p>
       <a
         href={html_url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-500 mt-2"
+        className="btn text-blue-500 mt-2"
       >
         View GitHub Profile
       </a>
