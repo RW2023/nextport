@@ -1,6 +1,6 @@
 // src/Components/UI/Navbar.tsx
 
-'use client'; 
+'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky-top-0 z-50 flex items-center justify-between flex-wrap bg-base-500 p-6 font-sans navbar mt-3">
+    <nav className="flex items-center justify-between flex-wrap bg-base-500 p-3 font-sans navbar mt-3 ">      {' '}
       <div className="flex items-center flex-shrink-0 font-bold  text-2xl mr-6">
         <Link href="/">
           <span className="font-semibold text-xl tracking-tight cursor-pointer">

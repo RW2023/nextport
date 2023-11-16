@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import '@/styles/globals.css';
+import Layout from './_layout';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+    <Layout>
       <Head>
         <title>Ryan Wilson</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +17,7 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/img/favicon_io/site.webmanifest" />
       </Head>
       <Component {...pageProps} />
+    </Layout>
     </>
   );
 }
