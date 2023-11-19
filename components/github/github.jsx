@@ -47,7 +47,7 @@ function GitHub() {
         className="rounded-full mx-auto"
       />
       <h1 className="text-2xl font-bold mt-4">{login}</h1>
-      <p className="mt-2">{bio || '⬇️See Bio ➡️'}</p>
+      <p className="mt-2">{bio || 'Coming Soon'}</p>
       <a
         href={html_url}
         target="_blank"
