@@ -42,7 +42,7 @@ function About() {
               <p className="text-l">
                 My next brush with programming was just out of high school. I
                 was working a tech support job supporting Dell PC Hardware at
-                the time. A girlfriend gifted me a book. It was a book on
+                the time. A friend gifted me a book. It was a book on
                 programming in C++. I struggled through the first chapter. It
                 was then I was sure programming was not for me. I read the first
                 chapter and it seemed like every single concept was over my
