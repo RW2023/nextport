@@ -7,7 +7,6 @@ import Image from 'next/image';
 
 const Hero = () => {
   const [isIconVisible, setIconVisible] = useState(true);
-  const videoRef = useRef(null);
 
   useEffect(() => {
     // Existing animations
@@ -56,43 +55,11 @@ const Hero = () => {
       easing: 'easeOutExpo',
     });
 
-    // Hide placeholder image when video starts playing
-    const videoElement = videoRef.current;
-    const handleVideoPlay = () => {
-      document.getElementById('video-placeholder').style.display = 'none';
-    };
-
-    videoElement.addEventListener('play', handleVideoPlay);
-
-    return () => {
-      videoElement.removeEventListener('play', handleVideoPlay);
-    };
   }, []);
 
   return (
     
       <div className="hero min-h-screen relative pt-15">
-        {/* Background Placeholder Image */}
-        <Image
-          src="/img/backgroundPlaceholderBlue.png" // Corrected path and filename
-          id="video-placeholder"
-          className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
-          width={500}
-          height={500}
-          alt="Video Placeholder"
-        />
-
-        {/* Background Video */}
-        <video
-          ref={videoRef}
-          className="absolute top-0 left-0 min-w-full min-h-full object-cover z-[-1]"
-          loop
-          autoPlay
-          muted
-        >
-          <source src="/morph.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
         {/* Content */}
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
